@@ -6,8 +6,8 @@ const camera 	= new THREE.PerspectiveCamera( 90, window.innerWidth / window.inne
 
 scene.background = new THREE.Color(0x1D6BEF)
 
-camera.position.set(180, player.height, 30)
-camera.lookAt(new THREE.Vector3(180, player.height, 0))
+camera.position.set(0, player.height, 30)
+camera.lookAt(new THREE.Vector3(0, player.height, 0))
 
 const renderer = new THREE.WebGLRenderer()
 renderer.setSize( window.innerWidth, window.innerHeight)
@@ -71,6 +71,164 @@ copyBrick2 = brick.clone()
 copyBrick2.position.set(3.7, 3.8, 0)
 scene.add(copyBrick2)
 
+
+
+
+
+const pipeLoader = new THREE.MTLLoader()
+
+pipeLoader.load("Models/Pipe/warppipe.mtl", (materials) => {
+	materials.preload()
+	let objLoader = new THREE.OBJLoader()
+	objLoader.setMaterials(materials)
+
+	objLoader.load("Models/Pipe/warppipe.obj", (mesh) => {
+
+		mesh.traverse((node) => {
+			if (node instanceof THREE.Mesh) {
+				node.castShadow = true
+			}
+		})
+
+		scene.add(mesh)
+		mesh.scale.set(0.25, 0.23, 0.2)
+		mesh.position.set(9.2, 0, 0.5)
+	})
+})
+
+const pipe2Loader = new THREE.MTLLoader()
+
+pipe2Loader.load("Models/Pipe/warppipe.mtl", (materials) => {
+	materials.preload()
+	let objLoader = new THREE.OBJLoader()
+	objLoader.setMaterials(materials)
+
+	objLoader.load("Models/Pipe/warppipe.obj", (mesh) => {
+
+		mesh.traverse((node) => {
+			if (node instanceof THREE.Mesh) {
+				node.castShadow = true
+			}
+		})
+
+		scene.add(mesh)
+		mesh.scale.set(0.25, 0.23, 0.2)
+		mesh.position.set(21, 1, 0.5)
+	})
+})
+
+const pipe2BottomLoader = new THREE.MTLLoader()
+
+pipe2BottomLoader.load("Models/Pipe/warppipe.mtl", (materials) => {
+	materials.preload()
+	let objLoader = new THREE.OBJLoader()
+	objLoader.setMaterials(materials)
+
+	objLoader.load("Models/Pipe/warppipe.obj", (mesh) => {
+
+		mesh.traverse((node) => {
+			if (node instanceof THREE.Mesh) {
+				node.castShadow = true
+			}
+		})
+
+		scene.add(mesh)
+		mesh.scale.set(0.25, 0.23, 0.2)
+		mesh.position.set(21, 1, 0.5)
+		mesh.rotation.x = -Math.PI
+	})
+})
+
+const pipe3Loader = new THREE.MTLLoader()
+
+pipe3Loader.load("Models/Pipe/warppipe.mtl", (materials) => {
+	materials.preload()
+	let objLoader = new THREE.OBJLoader()
+	objLoader.setMaterials(materials)
+
+	objLoader.load("Models/Pipe/warppipe.obj", (mesh) => {
+
+		mesh.traverse((node) => {
+			if (node instanceof THREE.Mesh) {
+				node.castShadow = true
+			}
+		})
+
+		scene.add(mesh)
+		mesh.scale.set(0.25, 0.24, 0.2)
+		mesh.position.set(30.5, 1.98, 0.5)
+	})
+})
+
+const pipe3BottomLoader = new THREE.MTLLoader()
+
+pipe3BottomLoader.load("Models/Pipe/warppipe.mtl", (materials) => {
+	materials.preload()
+	let objLoader = new THREE.OBJLoader()
+	objLoader.setMaterials(materials)
+
+	objLoader.load("Models/Pipe/warppipe.obj", (mesh) => {
+
+		mesh.traverse((node) => {
+			if (node instanceof THREE.Mesh) {
+				node.castShadow = true
+			}
+		})
+
+		scene.add(mesh)
+		mesh.scale.set(0.25, 0.397, 0.2)
+		mesh.position.set(30.5, 1.98, 0.5)
+		mesh.rotation.x = -Math.PI
+	})
+})
+
+const pipe4Loader = new THREE.MTLLoader()
+
+pipe4Loader.load("Models/Pipe/warppipe.mtl", (materials) => {
+	materials.preload()
+	let objLoader = new THREE.OBJLoader()
+	objLoader.setMaterials(materials)
+
+	objLoader.load("Models/Pipe/warppipe.obj", (mesh) => {
+
+		mesh.traverse((node) => {
+			if (node instanceof THREE.Mesh) {
+				node.castShadow = true
+			}
+		})
+
+		scene.add(mesh)
+		mesh.scale.set(0.25, 0.24, 0.2)
+		mesh.position.set(43.5, 1.98, 0.5)
+	})
+})
+
+const pipe4BottomLoader = new THREE.MTLLoader()
+
+pipe4BottomLoader.load("Models/Pipe/warppipe.mtl", (materials) => {
+	materials.preload()
+	let objLoader = new THREE.OBJLoader()
+	objLoader.setMaterials(materials)
+
+	objLoader.load("Models/Pipe/warppipe.obj", (mesh) => {
+
+		mesh.traverse((node) => {
+			if (node instanceof THREE.Mesh) {
+				node.castShadow = true
+			}
+		})
+
+		scene.add(mesh)
+		mesh.scale.set(0.25, 0.397, 0.2)
+		mesh.position.set(43.5, 1.98, 0.5)
+		mesh.rotation.x = -Math.PI
+	})
+})
+
+
+
+
+
 // const goombaLoader = new THREE.MTLLoader()
 
 // goombaLoader.load("Models/Goomba/Goomba.mtl", (materials) => {
@@ -102,6 +260,15 @@ scene.add(copyBrick2)
 // 	// dae.scale.set(.18, .18, .18)
 // 	// dae.rotation.x = 12.5
 // })
+
+
+
+
+
+
+
+
+
 
 const floorLoader = new Loader.load("Textures/floor.png")
 floorLoader.wrapS = THREE.RepeatWrapping
@@ -190,17 +357,24 @@ scene.add(cloneFloorSet3)
 
 
 
-const backgroundLoader = new Loader.load("/Textures/mario-1-1.gif")
 
-const background = new THREE.Mesh(
-	new THREE.PlaneGeometry(250, 15, 15, 15),
-	new THREE.MeshPhongMaterial({
-		map: backgroundLoader
-	})
-)
-background.material.side = THREE.DoubleSide;
-background.position.set(100, 6, 0)
-scene.add(background)
+
+// const backgroundLoader = new Loader.load("/Textures/mario-1-1.gif")
+
+// const background = new THREE.Mesh(
+// 	new THREE.PlaneGeometry(250, 15, 15, 15),
+// 	new THREE.MeshPhongMaterial({
+// 		map: backgroundLoader
+// 	})
+// )
+// background.material.side = THREE.DoubleSide;
+// background.position.set(100, 6, 0)
+// scene.add(background)
+
+
+
+
+
 
 const animate = () => {
 	requestAnimationFrame( animate )
