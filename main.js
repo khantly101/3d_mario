@@ -6,8 +6,8 @@ const camera 	= new THREE.PerspectiveCamera( 90, window.innerWidth / window.inne
 
 scene.background = new THREE.Color(0x1D6BEF)
 
-camera.position.set(0, player.height, 20)
-camera.lookAt(new THREE.Vector3(0, player.height, 0))
+camera.position.set(180, player.height, 30)
+camera.lookAt(new THREE.Vector3(180, player.height, 0))
 
 const renderer = new THREE.WebGLRenderer()
 renderer.setSize( window.innerWidth, window.innerHeight)
@@ -122,6 +122,73 @@ scene.add(meshFloor)
 const copyFloor = meshFloor.clone()
 copyFloor.position.set(15.75, -1, 1)
 scene.add(copyFloor)
+
+const smallFloorLoader = new Loader.load("Textures/floor.png")
+smallFloorLoader.wrapS = THREE.RepeatWrapping
+smallFloorLoader.wrapT = THREE.RepeatWrapping
+smallFloorLoader.repeat.set( 17.66, 2)
+
+const smallFloor = new THREE.Mesh(
+	new THREE.BoxGeometry(17.66, 1, 2),
+	new THREE.MeshPhongMaterial({
+		map: smallFloorLoader
+	})
+)
+smallFloor.position.set(67.85, -1, 0)
+smallFloor.rotation.x -= Math.PI / 2
+smallFloor.receiveShadow = true
+scene.add(smallFloor)
+
+const copySmallFloor = smallFloor.clone()
+copySmallFloor.position.set(67.85, -1, 1)
+scene.add(copySmallFloor)
+
+
+const floorSet2Loader = new Loader.load("Textures/floor.png")
+floorSet2Loader.wrapS = THREE.RepeatWrapping
+floorSet2Loader.wrapT = THREE.RepeatWrapping
+floorSet2Loader.repeat.set( 75.6, 2)
+
+const floorSet2 = new THREE.Mesh(
+	new THREE.BoxGeometry(75.6, 1, 2),
+	new THREE.MeshPhongMaterial({
+		map: floorSet2Loader
+	})
+)
+floorSet2.position.set(118.05, -1, 0)
+floorSet2.rotation.x -= Math.PI / 2
+floorSet2.receiveShadow = true
+scene.add(floorSet2)
+
+const cloneFloorSet2 = floorSet2.clone()
+cloneFloorSet2.position.set(118.05, -1, 1)
+scene.add(cloneFloorSet2)
+
+const floorSet3Loader = new Loader.load("Textures/floor.png")
+floorSet3Loader.wrapS = THREE.RepeatWrapping
+floorSet3Loader.wrapT = THREE.RepeatWrapping
+floorSet3Loader.repeat.set( 66.7, 2)
+
+const floorSet3 = new THREE.Mesh(
+	new THREE.BoxGeometry(66.7, 1, 2),
+	new THREE.MeshPhongMaterial({
+		map: floorSet3Loader
+	})
+)
+floorSet3.position.set(191.6, -1, 0)
+floorSet3.rotation.x -= Math.PI / 2
+floorSet3.receiveShadow = true
+scene.add(floorSet3)
+
+const cloneFloorSet3 = floorSet3.clone()
+cloneFloorSet3.position.set(191.6, -1, 1)
+scene.add(cloneFloorSet3)
+
+
+
+
+
+
 
 const backgroundLoader = new Loader.load("/Textures/mario-1-1.gif")
 
