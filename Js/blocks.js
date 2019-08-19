@@ -147,26 +147,123 @@ copyQuestion5 = question.clone()
 copyQuestion5.position.set(86.7, 8.2, 0)
 scene.add(copyQuestion5)
 
+//First Lower Section
+
 copyQuestion6 = question.clone()
-copyQuestion6.position.set(67.75, 3.8, 0)
+copyQuestion6.position.set(100.85, 3.8, 0)
 scene.add(copyQuestion6)
 
 copyQuestion7 = question.clone()
-copyQuestion7.position.set(67.75, 3.8, 0)
+copyQuestion7.position.set(104.4, 3.8, 0)
 scene.add(copyQuestion7)
 
 copyQuestion8 = question.clone()
-copyQuestion8.position.set(67.75, 3.8, 0)
+copyQuestion8.position.set(107.95, 3.8, 0)
 scene.add(copyQuestion8)
 
+//Second Upper Section
+
 copyQuestion9 = question.clone()
-copyQuestion9.position.set(67.75, 3.8, 0)
+copyQuestion9.position.set(104.4, 8.2, 0)
 scene.add(copyQuestion9)
 
+//Third Upper Section
+
 copyQuestion10 = question.clone()
-copyQuestion10.position.set(67.75, 3.8, 0)
+copyQuestion10.position.set(128.15, 8.2, 0)
 scene.add(copyQuestion10)
 
 copyQuestion11 = question.clone()
-copyQuestion11.position.set(67.75, 3.8, 0)
+copyQuestion11.position.set(129.2, 8.2, 0)
 scene.add(copyQuestion11)
+
+//Brick Blocks
+
+//First Upper Section
+
+copyBrick14 = brick.clone()
+copyBrick14.position.set(85.65, 8.2, 0)
+scene.add(copyBrick14)
+
+copyBrick15 = brick.clone()
+copyBrick15.position.set(84.6, 8.2, 0)
+scene.add(copyBrick15)
+
+copyBrick16 = brick.clone()
+copyBrick16.position.set(83.55, 8.2, 0)
+scene.add(copyBrick16)
+
+//First Lower Section
+
+copyBrick17 = brick.clone()
+copyBrick17.position.set(86.7, 3.8, 0)
+scene.add(copyBrick17)
+
+copyBrick18 = brick.clone()
+copyBrick18.position.set(93.8, 3.8, 0)
+scene.add(copyBrick18)
+
+copyBrick18 = brick.clone()
+copyBrick18.position.set(94.85, 3.8, 0)
+scene.add(copyBrick18)
+
+//Second Lower Section
+
+copyBrick19 = brick.clone()
+copyBrick19.position.set(115.05, 3.8, 0)
+scene.add(copyBrick19)
+
+copyBrick20 = brick.clone()
+copyBrick20.position.set(128, 3.8, 0)
+scene.add(copyBrick20)
+
+copyBrick21 = brick.clone()
+copyBrick21.position.set(129.05, 3.8, 0)
+scene.add(copyBrick21)
+
+//Second Upper Section
+
+copyBrick22 = brick.clone()
+copyBrick22.position.set(118.55, 8.2, 0)
+scene.add(copyBrick22)
+
+copyBrick23 = brick.clone()
+copyBrick23.position.set(119.6, 8.2, 0)
+scene.add(copyBrick23)
+
+copyBrick24 = brick.clone()
+copyBrick24.position.set(120.65, 8.2, 0)
+scene.add(copyBrick24)
+
+copyBrick25 = brick.clone()
+copyBrick25.position.set(127.10, 8.2, 0)
+scene.add(copyBrick25)
+
+copyBrick26 = brick.clone()
+copyBrick26.position.set(130.25, 8.2, 0)
+scene.add(copyBrick26)
+
+//////////////////////
+//Fourth Section Blocks
+//////////////////////
+
+//Question Blocks
+
+copyQuestion12 = question.clone()
+copyQuestion12.position.set(176.5, 3.8, 0)
+scene.add(copyQuestion12)
+
+
+//Brick Blocks
+
+copyBrick27 = brick.clone()
+copyBrick27.position.set(174.40, 3.8, 0)
+scene.add(copyBrick27)
+
+copyBrick28 = brick.clone()
+copyBrick28.position.set(175.45, 3.8, 0)
+scene.add(copyBrick28)
+
+copyBrick29 = brick.clone()
+copyBrick29.position.set(177.55, 3.8, 0)
+scene.add(copyBrick29)
