@@ -69,7 +69,7 @@ scene.add(ambientLight)
 
 
 
-const backgroundLoader = new Loader.load("/Textures/mario-1-1.gif")
+const backgroundLoader = new Loader.load("Textures/mario-1-1.gif")
 
 const background = new THREE.Mesh(
 	new THREE.PlaneGeometry(250, 15, 15, 15),
