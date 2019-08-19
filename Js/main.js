@@ -1,15 +1,15 @@
 const keyboard 	= {}
 const player 	= { height: 2.8 , speed: 0.2}
 const Loader 	= new THREE.TextureLoader()
-const scene 	= new THREE.Scene()
+const scene 	= new Physijs.Scene()
 const camera 	= new THREE.PerspectiveCamera( 90, window.innerWidth / window.innerHeight , 0.1, 1000 )
 
-scene.background = new THREE.Color(0x1D6BEF)
+scene.background = new THREE.Color(0x5c94fc)
 
-camera.position.set(100, player.height, 30)
-camera.lookAt(new THREE.Vector3(100, player.height, 0))
+camera.position.set(200, player.height, 10)
+camera.lookAt(new THREE.Vector3(200, player.height, 0))
 
-const renderer = new THREE.WebGLRenderer()
+const renderer = new THREE.WebGLRenderer({ antialias: true })
 renderer.setSize( window.innerWidth -4, window.innerHeight -4)
 renderer.shadowMap.enabled = true
 renderer.shadowMap.type = THREE.BasicShadowMap
@@ -25,28 +25,6 @@ scene.add(ambientLight)
 // light.shadow.camera.far = 25
 // scene.add(light)
 
-// const goombaLoader = new THREE.MTLLoader()
-
-// goombaLoader.load("Models/Goomba/Goomba.mtl", (materials) => {
-// 	materials.preload()
-// 	let objLoader = new THREE.OBJLoader()
-// 	objLoader.setMaterials(materials)
-
-// 	objLoader.load("Models/Goomba/Goomba.obj", (mesh) => {
-
-// 		mesh.traverse((node) => {
-// 			if (node instanceof THREE.Mesh) {
-// 				node.castShadow = true
-// 			}
-// 		})
-
-// 		scene.add(mesh)
-// 		mesh.scale.set(0.01, 0.01, 0.01)
-// 		mesh.position.set(-2, 0, -4)
-// 		mesh.rotation.y = -Math.PI
-// 	})
-// })
-
 // const marioLoader = new THREE.ColladaLoader()
 
 // marioLoader.load("Models/Marioo/mr_gold.dae", (materials) => {
@@ -59,26 +37,16 @@ scene.add(ambientLight)
 
 
 
+const backgroundLoader = new Loader.load("Textures/background.png")
 
-
-
-
-
-
-
-
-
-
-const backgroundLoader = new Loader.load("Textures/mario-1-1.gif")
-
-const background = new THREE.Mesh(
+const background = new Physijs.BoxMesh(
 	new THREE.PlaneGeometry(250, 15, 15, 15),
 	new THREE.MeshPhongMaterial({
 		map: backgroundLoader
 	})
 )
 background.material.side = THREE.DoubleSide;
-background.position.set(100, 6, 0)
+background.position.set(100, 6, -0.5)
 scene.add(background)
 
 

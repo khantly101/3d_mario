@@ -26,7 +26,7 @@ pipeLoader.load("Models/Pipe/warppipe.mtl", (materials) => {
 	objLoader.load("Models/Pipe/warppipe.obj", (mesh) => {
 
 		mesh.traverse((node) => {
-			if (node instanceof THREE.Mesh) {
+			if (node instanceof Physijs.BoxMesh) {
 				node.castShadow = true
 			}
 		})
@@ -47,7 +47,7 @@ pipe2Loader.load("Models/Pipe/warppipe.mtl", (materials) => {
 	objLoader.load("Models/Pipe/warppipe.obj", (mesh) => {
 
 		mesh.traverse((node) => {
-			if (node instanceof THREE.Mesh) {
+			if (node instanceof Physijs.BoxMesh) {
 				node.castShadow = true
 			}
 		})
@@ -66,7 +66,7 @@ pipe2BottomLoader.load("Models/Pipe/warppipe.mtl", (materials) => {
 	objLoader.load("Models/Pipe/warppipe.obj", (mesh) => {
 
 		mesh.traverse((node) => {
-			if (node instanceof THREE.Mesh) {
+			if (node instanceof Physijs.BoxMesh) {
 				node.castShadow = true
 			}
 		})
@@ -88,7 +88,7 @@ pipe3Loader.load("Models/Pipe/warppipe.mtl", (materials) => {
 	objLoader.load("Models/Pipe/warppipe.obj", (mesh) => {
 
 		mesh.traverse((node) => {
-			if (node instanceof THREE.Mesh) {
+			if (node instanceof Physijs.BoxMesh) {
 				node.castShadow = true
 			}
 		})
@@ -108,7 +108,7 @@ pipe3BottomLoader.load("Models/Pipe/warppipe.mtl", (materials) => {
 	objLoader.load("Models/Pipe/warppipe.obj", (mesh) => {
 
 		mesh.traverse((node) => {
-			if (node instanceof THREE.Mesh) {
+			if (node instanceof Physijs.BoxMesh) {
 				node.castShadow = true
 			}
 		})
@@ -130,7 +130,7 @@ pipe4Loader.load("Models/Pipe/warppipe.mtl", (materials) => {
 	objLoader.load("Models/Pipe/warppipe.obj", (mesh) => {
 
 		mesh.traverse((node) => {
-			if (node instanceof THREE.Mesh) {
+			if (node instanceof Physijs.BoxMesh) {
 				node.castShadow = true
 			}
 		})
@@ -150,7 +150,7 @@ pipe4BottomLoader.load("Models/Pipe/warppipe.mtl", (materials) => {
 	objLoader.load("Models/Pipe/warppipe.obj", (mesh) => {
 
 		mesh.traverse((node) => {
-			if (node instanceof THREE.Mesh) {
+			if (node instanceof Physijs.BoxMesh) {
 				node.castShadow = true
 			}
 		})
@@ -177,7 +177,7 @@ pipe5Loader.load("Models/Pipe/warppipe.mtl", (materials) => {
 	objLoader.load("Models/Pipe/warppipe.obj", (mesh) => {
 
 		mesh.traverse((node) => {
-			if (node instanceof THREE.Mesh) {
+			if (node instanceof Physijs.BoxMesh) {
 				node.castShadow = true
 			}
 		})
@@ -198,7 +198,7 @@ pipe6Loader.load("Models/Pipe/warppipe.mtl", (materials) => {
 	objLoader.load("Models/Pipe/warppipe.obj", (mesh) => {
 
 		mesh.traverse((node) => {
-			if (node instanceof THREE.Mesh) {
+			if (node instanceof Physijs.BoxMesh) {
 				node.castShadow = true
 			}
 		})

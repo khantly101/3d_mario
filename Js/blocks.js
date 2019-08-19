@@ -12,8 +12,8 @@ const blankLoader = new Loader.load("Textures/Hit_Block.png")
 
 //Question Blocks
 
-const question = new THREE.Mesh( 
-	new THREE.BoxGeometry( 1, 1, 1 ), 
+const question = new Physijs.BoxMesh(
+	new THREE.BoxGeometry(1, 1, 1 ), 
 	new THREE.MeshPhongMaterial({
 		map: questionLoader
 	}) 
@@ -41,7 +41,7 @@ scene.add(copyQuestion3)
 
 //Brick Blocks
 
-const brick = new THREE.Mesh(
+const brick = new Physijs.BoxMesh(
 	new THREE.BoxGeometry(1,1,1),
 	new THREE.MeshPhongMaterial({
 		map: brickLoader,
@@ -62,7 +62,7 @@ scene.add(copyBrick2)
 
 //Invisible Block
 
-const blank = new THREE.Mesh(
+const blank = new Physijs.BoxMesh(
 	new THREE.BoxGeometry(1,1,1),
 	new THREE.MeshPhongMaterial({
 		map: blankLoader,
