@@ -1,80 +1,92 @@
 const keyboard 	= {}
-const player 	= { height: 2.8 , speed: 0.2}
+const player 	= { height: 2.8 , speed: .2}
 const Loader 	= new THREE.TextureLoader()
-const scene 	= new Physijs.Scene()
-const camera 	= new THREE.PerspectiveCamera( 90, window.innerWidth / window.innerHeight , 0.1, 1000 )
+const scene 	= new Physijs.Scene({fixedTimeStep: 1 / 120})
+const camera 	= new THREE.PerspectiveCamera( 90, window.innerWidth / window.innerHeight , 1, 1000 )
 
-scene.background = new THREE.Color(0x5c94fc)
+let renderer, previous
 
-camera.position.set(200, player.height, 10)
-camera.lookAt(new THREE.Vector3(200, player.height, 0))
+const initScene = () => {
+	renderer = new THREE.WebGLRenderer({ antialias: true })
+	renderer.setSize( window.innerWidth -4, window.innerHeight -4)
+	document.body.appendChild( renderer.domElement )
 
-const renderer = new THREE.WebGLRenderer({ antialias: true })
-renderer.setSize( window.innerWidth -4, window.innerHeight -4)
-renderer.shadowMap.enabled = true
-renderer.shadowMap.type = THREE.BasicShadowMap
-document.body.appendChild( renderer.domElement )
+	scene.background = new THREE.Color(0x5c94fc)
+	scene.setGravity(new THREE.Vector3( 0, -30, 0 ))
 
-ambientLight = new THREE.AmbientLight(0xffffff, 1)
-scene.add(ambientLight)
+	camera.position.set(0, player.height, 20)
+	camera.lookAt(new THREE.Vector3(0, player.height, 0))
+	scene.add(camera)
 
-// const light = new THREE.PointLight(0xffffff, 0.5, 18)
-// light.position.set(-3, 6, -3)
-// light.castShadow = true
-// light.shadow.camera.near = 0.1
-// light.shadow.camera.far = 25
-// scene.add(light)
+	ambientLight = new THREE.AmbientLight(0xffffff, 1)
+	scene.add(ambientLight)
 
-// const marioLoader = new THREE.ColladaLoader()
+	const backgroundLoader = new Loader.load("Textures/background.png")
 
-// marioLoader.load("Models/Marioo/mr_gold.dae", (materials) => {
-// 	let dae = materials.scene
-// 	scene.add(dae)
+	const background = new Physijs.PlaneMesh(
+		new THREE.PlaneGeometry(250, 15, 15, 15),
+		new THREE.MeshPhongMaterial({
+			map: backgroundLoader
+		}),
+		0
+	)
+	background.material.side = THREE.DoubleSide;
+	background.position.set(100, 5.8, -0.6)
+	scene.add(background)
 
-// 	// dae.scale.set(.18, .18, .18)
-// 	// dae.rotation.x = 12.5
-// })
+	initFloor()
+	initBlocks()
+	initSteps()
+	initPipes()
+	animate()
+}
 
+	playerMaterial = Physijs.createMaterial(
+		new THREE.MeshPhongMaterial( { color: 0x00ff00 } )
+	)
 
+	const playerBox = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(1,1,1),
+		playerMaterial,
+		1
+	)
+	playerBox.position.set(20, 4, 0)
+	// playerBox.setCcdMotionThreshold(1);
 
-const backgroundLoader = new Loader.load("Textures/background.png")
-
-const background = new Physijs.BoxMesh(
-	new THREE.PlaneGeometry(250, 15, 15, 15),
-	new THREE.MeshPhongMaterial({
-		map: backgroundLoader
+	playerBox.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+    	// player.speed = -.1
 	})
-)
-background.material.side = THREE.DoubleSide;
-background.position.set(100, 6, -0.5)
-scene.add(background)
 
-
-
-
-
+	scene.add(playerBox)
 
 const animate = () => {
+	scene.simulate()
 	requestAnimationFrame( animate )
 
-	if (keyboard[87]) {
-		camera.position.x -= Math.sin(camera.rotation.y) * player.speed
-		camera.position.z -= Math.cos(camera.rotation.y) * player.speed
-	}
-
-	if (keyboard[83]) {
-		camera.position.x += Math.sin(camera.rotation.y) * player.speed
-		camera.position.z += Math.cos(camera.rotation.y) * player.speed
-	}
-
+	
 	if (keyboard[65]) {
-		camera.position.x += Math.sin(camera.rotation.y - Math.PI/2) * player.speed
-		camera.position.z += Math.cos(camera.rotation.y - Math.PI/2) * player.speed
+		// camera.position.x += Math.sin(camera.rotation.y - Math.PI/2) * player.speed
+		// camera.position.z += Math.cos(camera.rotation.y - Math.PI/2) * player.speed
+		previous = playerBox.position
+		playerBox.__dirtyPosition = true
+		playerBox.__dirtyRotation = true
+		playerBox.position.x -= player.speed
+
 	}
 
 	if (keyboard[68]) {
-		camera.position.x += Math.sin(camera.rotation.y + Math.PI/2) * player.speed
-		camera.position.z += Math.cos(camera.rotation.y + Math.PI/2) * player.speed
+		// camera.position.x += Math.sin(camera.rotation.y + Math.PI/2) * player.speed
+		// camera.position.z += Math.cos(camera.rotation.y + Math.PI/2) * player.speed
+		player.speed = 0.2
+		playerBox.__dirtyPosition = true
+		playerBox.__dirtyRotation = true
+		playerBox.position.x += player.speed
+	}
+
+	if (keyboard[87]) {
+		playerBox.__dirtyPosition = true
+		playerBox.__dirtyRotation = true
+		playerBox.position.y += player.speed
 	}
 
 	if (keyboard[69]) {
@@ -92,7 +104,7 @@ const animate = () => {
 	if (keyboard[38]) {
 		camera.position.y += 0.1
 	}
-
+	renderer.clear()
 	renderer.render( scene, camera )
 }
 
@@ -107,5 +119,4 @@ const keyUp = (event) => {
 window.addEventListener('keydown', keyDown)
 window.addEventListener('keyup', keyUp)
 
-
-animate()
+window.onload = initScene

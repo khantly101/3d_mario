@@ -182,181 +182,239 @@ const sides9 = [
 
 
 //////////////////////
-//First Steps
+//Init Function
 //////////////////////
 
-const step4 = new Physijs.BoxMesh(
-	new THREE.BoxGeometry(4.68, 1, 2 ), 
-	sides4 
-)
-step4.position.set(135.75, .5, .5)
-step4.castShadow = true
-step4.receiveShadow = true
-scene.add(step4)
+initSteps = () => {
 
-const step3 = new Physijs.BoxMesh(
-	new THREE.BoxGeometry(3.51, 1, 2 ), 
-	sides3
-)
-step3.position.set(136.335, 1.5, .5)
-step3.castShadow = true
-step3.receiveShadow = true
-scene.add(step3)
+	//////////////////////
+	//First Steps
+	//////////////////////
+	
+	const step4 = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(4.68, 1, 2 ), 
+		sides4,
+		0
+	)
+	step4.position.set(135.75, .5, .5)
+	scene.add(step4)
 
-const step2 = new Physijs.BoxMesh(
-	new THREE.BoxGeometry(2.34, 1, 2 ), 
-	sides2
-)
-step2.position.set(136.92, 2.5, .5)
-step2.castShadow = true
-step2.receiveShadow = true
-scene.add(step2)
+	const step3 = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(3.51, 1, 2 ), 
+		sides3,
+		0
+	)
+	step3.position.set(136.335, 1.5, .5)
+	scene.add(step3)
+	
+	const step2 = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(2.34, 1, 2 ), 
+		sides2,
+		0
+	)
+	step2.position.set(136.92, 2.5, .5)
+	scene.add(step2)
+	
+	const step = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(1.17, 1, 2 ), 
+		sides,
+		0
+	)
+	step.position.set(137.505, 3.5, .5)
+	scene.add(step)
+	
+	
+	//////////////////////
+	//Second Steps
+	//////////////////////
+	
+	step4clone = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(4.68, 1, 2 ), 
+		sides4,
+		0
+	)
+	step4clone.position.set(142.85, .5, .5)
+	scene.add(step4clone)
+	
+	step3clone = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(3.51, 1, 2 ), 
+		sides3,
+		0
+	)
+	step3clone.position.set(142.265, 1.5, .5)
+	scene.add(step3clone)
+	
+	step2clone = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(2.34, 1, 2 ), 
+		sides2,
+		0
+	)
+	step2clone.position.set(141.68, 2.5, .5)
+	scene.add(step2clone)
+	
+	stepclone = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(1.17, 1, 2 ), 
+		sides,
+		0
+	)
+	stepclone.position.set(141.095, 3.5, .5)
+	scene.add(stepclone)
+	
 
-const step = new Physijs.BoxMesh(
-	new THREE.BoxGeometry(1.17, 1, 2 ), 
-	sides
-)
-step.position.set(137.505, 3.5, .5)
-step.castShadow = true
-step.receiveShadow = true
-scene.add(step)
+	//////////////////////
+	//Third Steps
+	//////////////////////
+	
+	const step5 = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(5.85, 1, 2 ), 
+		sides5,
+		0
+	)
+	step5.position.set(152.925, .5, .5)
+	scene.add(step5)
 
+	step4clone = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(4.68, 1, 2 ), 
+		sides4,
+		0
+	)
+	step4clone.position.set(153.51, 1.5, .5)
+	scene.add(step4clone)
+	
+	step3clone = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(3.51, 1, 2 ), 
+		sides3,
+		0
+	)
+	step3clone.position.set(154.095, 2.5, .5)
+	scene.add(step3clone)
+	
+	step2clone = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(2.34, 1, 2 ), 
+		sides2,
+		0
+	)
+	step2clone.position.set(154.68, 3.5, .5)
+	scene.add(step2clone)
+	
 
-//////////////////////
-//Second Steps
-//////////////////////
+	//////////////////////
+	//Fourth Steps
+	//////////////////////
+	
+	step4set3clone = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(4.68, 1, 2 ), 
+		sides4,
+		0
+	)
+	step4set3clone.position.set(160.59, .5, .5)
+	scene.add(step4set3clone)
+	
+	step3set3clone = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(3.51, 1, 2 ), 
+		sides3,
+		0
+	)
+	step3set3clone.position.set(160.005, 1.5, .5)
+	scene.add(step3set3clone)
+	
+	step2set3clone = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(2.34, 1, 2 ), 
+		sides2,
+		0
+	)
+	step2set3clone.position.set(159.42, 2.5, .5)
+	scene.add(step2set3clone)
+	
+	stepset3clone = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(1.17, 1, 2 ), 
+		sides,
+		0
+	)
+	stepset3clone.position.set(158.835, 3.5, .5)
+	scene.add(stepset3clone)
+	
+	
+	//////////////////////
+	//Fifth Steps
+	//////////////////////
 
-step4clone = step4.clone()
-step4clone.position.set(142.85, .5, .5)
-scene.add(step4clone)
+	const step9 = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(10.53, 1, 2 ), 
+		sides9,
+		0
+	)
+	step9.position.set(194.34, .5, .5)
+	scene.add(step9)
+	
+	const step8 = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(9.36, 1, 2 ), 
+		sides8,
+		0
+	)
+	step8.position.set(194.925, 1.5, .5)
+	scene.add(step8)
+	
+	const step7 = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(8.19, 1, 2 ), 
+		sides7,
+		0
+	)
+	step7.position.set(195.51, 2.5, .5)
+	scene.add(step7)
+	
+	const step6 = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(7.02, 1, 2 ), 
+		sides6,
+		0
+	)
+	step6.position.set(196.095, 3.5, .5)
+	scene.add(step6)
+	
+	step5set4clone = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(5.85, 1, 2 ), 
+		sides5,
+		0
+	)
+	step5set4clone.position.set(196.68, 4.5, .5)
+	scene.add(step5set4clone)
+	
+	step4set4clone = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(4.68, 1, 2 ), 
+		sides4,
+		0
+	)
+	step4set4clone.position.set(197.265, 5.5, .5)
+	scene.add(step4set4clone)
+	
+	step3set4clone = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(3.51, 1, 2 ), 
+		sides3,
+		0
+	)
+	step3set4clone.position.set(197.85, 6.5, .5)
+	scene.add(step3set4clone)
+	
+	step2set4clone = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(2.34, 1, 2 ), 
+		sides2,
+		0
+	)
+	step2set4clone.position.set(198.435, 7.5, .5)
+	scene.add(step2set4clone)
+	
+	//////////////////////
+	//Flag Stand
+	//////////////////////
 
-step3clone = step3.clone()
-step3clone.position.set(142.265, 1.5, .5)
-scene.add(step3clone)
-
-step2clone = step2.clone()
-step2clone.position.set(141.68, 2.5, .5)
-scene.add(step2clone)
-
-stepclone = step.clone()
-stepclone.position.set(141.095, 3.5, .5)
-scene.add(stepclone)
-
-
-//////////////////////
-//Third Steps
-//////////////////////
-
-const step5 = new Physijs.BoxMesh(
-	new THREE.BoxGeometry(5.85, 1, 2 ), 
-	sides5
-)
-step5.position.set(152.925, .5, .5)
-step5.castShadow = true
-step5.receiveShadow = true
-scene.add(step5)
-
-step4clone = step4.clone()
-step4clone.position.set(153.51, 1.5, .5)
-scene.add(step4clone)
-
-step3clone = step3.clone()
-step3clone.position.set(154.095, 2.5, .5)
-scene.add(step3clone)
-
-step2clone = step2.clone()
-step2clone.position.set(154.68, 3.5, .5)
-scene.add(step2clone)
-
-
-//////////////////////
-//Fourth Steps
-//////////////////////
-
-step4set3clone = step4.clone()
-step4set3clone.position.set(160.59, .5, .5)
-scene.add(step4set3clone)
-
-step3set3clone = step3.clone()
-step3set3clone.position.set(160.005, 1.5, .5)
-scene.add(step3set3clone)
-
-step2set3clone = step2.clone()
-step2set3clone.position.set(159.42, 2.5, .5)
-scene.add(step2set3clone)
-
-stepset3clone = step.clone()
-stepset3clone.position.set(158.835, 3.5, .5)
-scene.add(stepset3clone)
-
-
-//////////////////////
-//Fifth Steps
-//////////////////////
-
-const step9 = new Physijs.BoxMesh(
-	new THREE.BoxGeometry(10.53, 1, 2 ), 
-	sides9
-)
-step9.position.set(194.34, .5, .5)
-step9.castShadow = true
-step9.receiveShadow = true
-scene.add(step9)
-
-const step8 = new Physijs.BoxMesh(
-	new THREE.BoxGeometry(9.36, 1, 2 ), 
-	sides8
-)
-step8.position.set(194.925, 1.5, .5)
-step8.castShadow = true
-step8.receiveShadow = true
-scene.add(step8)
-
-const step7 = new Physijs.BoxMesh(
-	new THREE.BoxGeometry(8.19, 1, 2 ), 
-	sides7
-)
-step7.position.set(195.51, 2.5, .5)
-step7.castShadow = true
-step7.receiveShadow = true
-scene.add(step7)
-
-const step6 = new Physijs.BoxMesh(
-	new THREE.BoxGeometry(7.02, 1, 2 ), 
-	sides6
-)
-step6.position.set(196.095, 3.5, .5)
-step6.castShadow = true
-step6.receiveShadow = true
-scene.add(step6)
-
-step5set4clone = step5.clone()
-step5set4clone.position.set(196.68, 4.5, .5)
-scene.add(step5set4clone)
-
-step4set4clone = step4.clone()
-step4set4clone.position.set(197.265, 5.5, .5)
-scene.add(step4set4clone)
-
-step3set4clone = step3.clone()
-step3set4clone.position.set(197.85, 6.5, .5)
-scene.add(step3set4clone)
-
-step2set4clone = step2.clone()
-step2set4clone.position.set(198.435, 7.5, .5)
-scene.add(step2set4clone)
-
-//////////////////////
-//Flag Stand
-//////////////////////
-
-const stand = new Physijs.BoxMesh(
-	new THREE.BoxGeometry(1, 1, 1), 
-	new THREE.MeshPhongMaterial({
-		map: stepLoader
-	})
-)
-stand.position.set(209.6, .5, .5)
-stand.castShadow = true
-stand.receiveShadow = true
-scene.add(stand)
+	const stand = new Physijs.BoxMesh(
+		new THREE.BoxGeometry(1, 1, 1), 
+		new THREE.MeshPhongMaterial({
+			map: stepLoader
+		}),
+		0
+	)
+	stand.position.set(209.6, .5, .5)
+	scene.add(stand)
+	
+}

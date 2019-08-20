@@ -2,209 +2,130 @@
 //Loaders
 //////////////////////
 
-const pipeLoader = new THREE.MTLLoader()
-const pipe2Loader = new THREE.MTLLoader()
-const pipe2BottomLoader = new THREE.MTLLoader()
-const pipe3Loader = new THREE.MTLLoader()
-const pipe3BottomLoader = new THREE.MTLLoader()
-const pipe4Loader = new THREE.MTLLoader()
-const pipe4BottomLoader = new THREE.MTLLoader()
-const pipe5Loader = new THREE.MTLLoader()
-const pipe6Loader = new THREE.MTLLoader()
-
-//////////////////////
-//First Section Pipes
-//////////////////////
-
-//First Pipe
-
-pipeLoader.load("Models/Pipe/warppipe.mtl", (materials) => {
-	materials.preload()
-	let objLoader = new THREE.OBJLoader()
-	objLoader.setMaterials(materials)
-
-	objLoader.load("Models/Pipe/warppipe.obj", (mesh) => {
-
-		mesh.traverse((node) => {
-			if (node instanceof Physijs.BoxMesh) {
-				node.castShadow = true
-			}
-		})
-
-		scene.add(mesh)
-		mesh.scale.set(0.25, 0.23, 0.2)
-		mesh.position.set(9.3, 0, 0.5)
-	})
-})
-
-//Second Pipe
-
-pipe2Loader.load("Models/Pipe/warppipe.mtl", (materials) => {
-	materials.preload()
-	let objLoader = new THREE.OBJLoader()
-	objLoader.setMaterials(materials)
-
-	objLoader.load("Models/Pipe/warppipe.obj", (mesh) => {
-
-		mesh.traverse((node) => {
-			if (node instanceof Physijs.BoxMesh) {
-				node.castShadow = true
-			}
-		})
-
-		scene.add(mesh)
-		mesh.scale.set(0.25, 0.23, 0.2)
-		mesh.position.set(21.1, 1, 0.5)
-	})
-})
-
-pipe2BottomLoader.load("Models/Pipe/warppipe.mtl", (materials) => {
-	materials.preload()
-	let objLoader = new THREE.OBJLoader()
-	objLoader.setMaterials(materials)
-
-	objLoader.load("Models/Pipe/warppipe.obj", (mesh) => {
-
-		mesh.traverse((node) => {
-			if (node instanceof Physijs.BoxMesh) {
-				node.castShadow = true
-			}
-		})
-
-		scene.add(mesh)
-		mesh.scale.set(0.25, 0.23, 0.2)
-		mesh.position.set(21.1, 1, 0.5)
-		mesh.rotation.x = -Math.PI
-	})
-})
-
-//Third Pipe
-
-pipe3Loader.load("Models/Pipe/warppipe.mtl", (materials) => {
-	materials.preload()
-	let objLoader = new THREE.OBJLoader()
-	objLoader.setMaterials(materials)
-
-	objLoader.load("Models/Pipe/warppipe.obj", (mesh) => {
-
-		mesh.traverse((node) => {
-			if (node instanceof Physijs.BoxMesh) {
-				node.castShadow = true
-			}
-		})
-
-		scene.add(mesh)
-		mesh.scale.set(0.25, 0.24, 0.2)
-		mesh.position.set(30.6, 1.98, 0.5)
-	})
-})
-
-
-pipe3BottomLoader.load("Models/Pipe/warppipe.mtl", (materials) => {
-	materials.preload()
-	let objLoader = new THREE.OBJLoader()
-	objLoader.setMaterials(materials)
-
-	objLoader.load("Models/Pipe/warppipe.obj", (mesh) => {
-
-		mesh.traverse((node) => {
-			if (node instanceof Physijs.BoxMesh) {
-				node.castShadow = true
-			}
-		})
-
-		scene.add(mesh)
-		mesh.scale.set(0.25, 0.397, 0.2)
-		mesh.position.set(30.6, 1.98, 0.5)
-		mesh.rotation.x = -Math.PI
-	})
-})
-
-//Fourth Pipe
-
-pipe4Loader.load("Models/Pipe/warppipe.mtl", (materials) => {
-	materials.preload()
-	let objLoader = new THREE.OBJLoader()
-	objLoader.setMaterials(materials)
-
-	objLoader.load("Models/Pipe/warppipe.obj", (mesh) => {
-
-		mesh.traverse((node) => {
-			if (node instanceof Physijs.BoxMesh) {
-				node.castShadow = true
-			}
-		})
-
-		scene.add(mesh)
-		mesh.scale.set(0.25, 0.24, 0.2)
-		mesh.position.set(43.6, 1.98, 0.5)
-	})
-})
-
-
-pipe4BottomLoader.load("Models/Pipe/warppipe.mtl", (materials) => {
-	materials.preload()
-	let objLoader = new THREE.OBJLoader()
-	objLoader.setMaterials(materials)
-
-	objLoader.load("Models/Pipe/warppipe.obj", (mesh) => {
-
-		mesh.traverse((node) => {
-			if (node instanceof Physijs.BoxMesh) {
-				node.castShadow = true
-			}
-		})
-
-		scene.add(mesh)
-		mesh.scale.set(0.25, 0.397, 0.2)
-		mesh.position.set(43.6, 1.98, 0.5)
-		mesh.rotation.x = -Math.PI
-	})
-})
+const pipeLoader = new Loader.load("Textures/pipe.png")
+const topLoader = new Loader.load("Textures/pipe_top.png")
 
 
 //////////////////////
-//Second Section Pipes
+//Sides
 //////////////////////
 
-// Fifth Pipe
+const pipeSides = [
+	new THREE.MeshPhongMaterial({map: pipeLoader}),
+	new THREE.MeshPhongMaterial({map: topLoader}),
+	new THREE.MeshPhongMaterial({color: 0x0fdc0a})
+]
 
-pipe5Loader.load("Models/Pipe/warppipe.mtl", (materials) => {
-	materials.preload()
-	let objLoader = new THREE.OBJLoader()
-	objLoader.setMaterials(materials)
+//////////////////////
+//Init Function
+//////////////////////
 
-	objLoader.load("Models/Pipe/warppipe.obj", (mesh) => {
+initPipes = () => {
 
-		mesh.traverse((node) => {
-			if (node instanceof Physijs.BoxMesh) {
-				node.castShadow = true
-			}
-		})
+	//////////////////////
+	//First Section Pipes
+	//////////////////////
 
-		scene.add(mesh)
-		mesh.scale.set(0.25, 0.23, 0.2)
-		mesh.position.set(168.85, 0, 0.5)
+	//First Pipe
+
+	const pipe = new Physijs.BoxMesh(
+		new THREE.CylinderGeometry(1, 1, 2, 32 ), 
+		pipeSides,
+		0
+	)
+	pipe.position.set(9.3, 1, 0.5)
+	scene.add(pipe)
+	pipe.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		if (keyboard[65]) {
+			playerBox.position.x += 1 
+		} else if (keyboard[68]) {
+			playerBox.position.x -= 1
+		}
 	})
-})
 
-// Sixth Pipe
 
-pipe6Loader.load("Models/Pipe/warppipe.mtl", (materials) => {
-	materials.preload()
-	let objLoader = new THREE.OBJLoader()
-	objLoader.setMaterials(materials)
+	//Second Pipe
 
-	objLoader.load("Models/Pipe/warppipe.obj", (mesh) => {
+	const pipe2 = new Physijs.BoxMesh(
+		new THREE.CylinderGeometry(1, 1, 2, 32 ), 
+		pipeSides,
+		0
+	)
+	pipe2.position.set(21.1, 2, 0.5)
+	scene.add(pipe2)
 
-		mesh.traverse((node) => {
-			if (node instanceof Physijs.BoxMesh) {
-				node.castShadow = true
-			}
-		})
+	const pipe2Bottom = new Physijs.BoxMesh(
+		new THREE.CylinderGeometry(1, 1, 2, 32 ), 
+		pipeSides,
+		0
+	)
+	pipe2Bottom.position.set(21.1, 0, 0.5)
+	pipe2Bottom.rotation.x = -Math.PI
+	scene.add(pipe2Bottom)
 
-		scene.add(mesh)
-		mesh.scale.set(0.25, 0.23, 0.2)
-		mesh.position.set(187.75, 0, 0.5)
-	})
-})
+
+	//Third Pipe
+
+	const pipe3 = new Physijs.BoxMesh(
+		new THREE.CylinderGeometry(1, 1, 2, 32 ), 
+		pipeSides,
+		0
+	)
+	pipe3.position.set(30.6, 3.1, 0.5)
+	scene.add(pipe3)
+
+	const pipe3Bottom = new Physijs.BoxMesh(
+		new THREE.CylinderGeometry(1, 1, 4.1, 32 ), 
+		pipeSides,
+		0
+	)
+	pipe3Bottom.position.set(30.6, .2, 0.5)
+	pipe3Bottom.rotation.x = -Math.PI
+	scene.add(pipe3Bottom)
+
+
+	//Fourth Pipe
+
+	const pipe4 = new Physijs.BoxMesh(
+		new THREE.CylinderGeometry(1, 1, 2, 32 ), 
+		pipeSides,
+		0
+	)
+	pipe4.position.set(43.6, 3.1, 0.5)
+	scene.add(pipe4)
+
+	const pipe4Bottom = new Physijs.BoxMesh(
+		new THREE.CylinderGeometry(1, 1, 4.1, 32 ), 
+		pipeSides,
+		0
+	)
+	pipe4Bottom.position.set(43.6, .2, 0.5)
+	pipe4Bottom.rotation.x = -Math.PI
+	scene.add(pipe4Bottom)
+
+
+	//////////////////////
+	//Second Section Pipes
+	//////////////////////
+
+	// Fifth Pipe
+
+	const pipe5 = new Physijs.BoxMesh(
+		new THREE.CylinderGeometry(1, 1, 2, 32 ), 
+		pipeSides,
+		0
+	)
+	pipe5.position.set(168.85, 1, 0.5)
+	scene.add(pipe5)
+
+	// Sixth Pipe
+
+	const pipe6 = new Physijs.BoxMesh(
+		new THREE.CylinderGeometry(1, 1, 2, 32 ), 
+		pipeSides,
+		0
+	)
+	pipe6.position.set(187.75, 1, 0.5)
+	scene.add(pipe6)
+
+}
