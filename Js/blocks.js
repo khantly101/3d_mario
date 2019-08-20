@@ -28,7 +28,7 @@ const initBlocks = () => {
 	scene.add(questionTop)
 
 	questionTop.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-    	jump = true
+		jump = true
 	})
 
 	const questionBottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
@@ -37,7 +37,7 @@ const initBlocks = () => {
 	scene.add(questionBottom)
 
 	questionBottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-    	
+
 	})
 
 	///////////////////
@@ -56,7 +56,7 @@ const initBlocks = () => {
 	scene.add(copyQuestionTop)
 
 	copyQuestionTop.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-    	jump = true
+		jump = true
 	})
 
 	const copyQuestionBottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
@@ -65,7 +65,7 @@ const initBlocks = () => {
 	scene.add(copyQuestionBottom)
 
 	copyQuestionBottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-    	
+		
 	})
 
 	///////////////////
@@ -80,7 +80,7 @@ const initBlocks = () => {
 	scene.add(copyQuestion2Top)
 
 	copyQuestion2Top.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-    	jump = true
+		jump = true
 	})
 
 	const copyQuestion2Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
@@ -89,12 +89,14 @@ const initBlocks = () => {
 	scene.add(copyQuestion2Bottom)
 
 	copyQuestion2Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-    	
+		
 	})
 
 	///////////////////
 
 	//Upper Block
+
+	///////////////////
 	
 	const copyQuestion3 = new Physijs.BoxMesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshPhongMaterial({map: questionLoader}), 0)
 	copyQuestion3.position.set(1.6, 8.2, .5)
@@ -106,7 +108,7 @@ const initBlocks = () => {
 	scene.add(copyQuestion3Top)
 
 	copyQuestion3Top.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-    	jump = true
+		jump = true
 	})
 
 	const copyQuestion3Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
@@ -115,7 +117,7 @@ const initBlocks = () => {
 	scene.add(copyQuestion3Bottom)
 
 	copyQuestion3Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-    	
+		
 	})
 
 	
@@ -133,7 +135,7 @@ const initBlocks = () => {
 	scene.add(copyQuestion4Top)
 
 	copyQuestion4Top.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-    	jump = true
+		jump = true
 	})
 
 	const copyQuestion4Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
@@ -142,7 +144,7 @@ const initBlocks = () => {
 	scene.add(copyQuestion4Bottom)
 
 	copyQuestion4Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-    	
+		
 	})
 
 
@@ -164,7 +166,7 @@ const initBlocks = () => {
 	scene.add(copyQuestion5Top)
 
 	copyQuestion5Top.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-    	jump = true
+		jump = true
 	})
 
 	const copyQuestion5Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
@@ -173,7 +175,7 @@ const initBlocks = () => {
 	scene.add(copyQuestion5Bottom)
 
 	copyQuestion5Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-    	
+		
 	})
 
 	///////////////////
@@ -192,7 +194,7 @@ const initBlocks = () => {
 	scene.add(copyQuestion6Top)
 
 	copyQuestion6Top.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-    	jump = true
+		jump = true
 	})
 
 	const copyQuestion6Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
@@ -201,7 +203,7 @@ const initBlocks = () => {
 	scene.add(copyQuestion6Bottom)
 
 	copyQuestion6Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-    	
+		
 	})
 
 	///////////////////
@@ -216,7 +218,7 @@ const initBlocks = () => {
 	scene.add(copyQuestion7Top)
 
 	copyQuestion7Top.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-    	jump = true
+		jump = true
 	})
 
 	const copyQuestion7Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
@@ -225,7 +227,7 @@ const initBlocks = () => {
 	scene.add(copyQuestion7Bottom)
 
 	copyQuestion7Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-    	
+		
 	})
 
 	///////////////////
@@ -234,13 +236,13 @@ const initBlocks = () => {
 	copyQuestion8.position.set(107.95, 3.8, .5)
 	scene.add(copyQuestion8)
 
-		const copyQuestion8Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyQuestion8Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyQuestion8Top.position.set(107.95, 4.35, .5)
 	copyQuestion8Top.rotation.x = -Math.PI/2
 	scene.add(copyQuestion8Top)
 
 	copyQuestion8Top.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-    	jump = true
+		jump = true
 	})
 
 	const copyQuestion8Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
@@ -249,27 +251,89 @@ const initBlocks = () => {
 	scene.add(copyQuestion8Bottom)
 
 	copyQuestion8Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-    	
+		
 	})
 
 	///////////////////
 	
 	//Second Upper Section
+
+	///////////////////
 	
 	const copyQuestion9 = new Physijs.BoxMesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshPhongMaterial({map: questionLoader}), 0)
 	copyQuestion9.position.set(104.4, 8.2, .5)
 	scene.add(copyQuestion9)
+
+	const copyQuestion9Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	copyQuestion9Top.position.set(104.4, 8.75, .5)
+	copyQuestion9Top.rotation.x = -Math.PI/2
+	scene.add(copyQuestion9Top)
+
+	copyQuestion9Top.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		jump = true
+	})
+
+	const copyQuestion9Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	copyQuestion9Bottom.position.set(104.4, 7.65, .5)
+	copyQuestion9Bottom.rotation.x = -Math.PI/2
+	scene.add(copyQuestion9Bottom)
+
+	copyQuestion9Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		
+	})
+
+	///////////////////
 	
 	//Third Upper Section
+
+	///////////////////
 	
 	const copyQuestion10 = new Physijs.BoxMesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshPhongMaterial({map: questionLoader}), 0)
 	copyQuestion10.position.set(128.15, 8.2, .5)
 	scene.add(copyQuestion10)
+
+	const copyQuestion10Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	copyQuestion10Top.position.set(128.15, 8.75, .5)
+	copyQuestion10Top.rotation.x = -Math.PI/2
+	scene.add(copyQuestion10Top)
+
+	copyQuestion10Top.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		jump = true
+	})
+
+	const copyQuestion10Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	copyQuestion10Bottom.position.set(128.15, 7.65, .5)
+	copyQuestion10Bottom.rotation.x = -Math.PI/2
+	scene.add(copyQuestion10Bottom)
+
+	copyQuestion10Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		
+	})
+
+	///////////////////
 	
 	const copyQuestion11 = new Physijs.BoxMesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshPhongMaterial({map: questionLoader}), 0)
 	copyQuestion11.position.set(129.2, 8.2, .5)
 	scene.add(copyQuestion11)
-	
+
+	const copyQuestion11Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	copyQuestion11Top.position.set(129.2, 8.75, .5)
+	copyQuestion11Top.rotation.x = -Math.PI/2
+	scene.add(copyQuestion11Top)
+
+	copyQuestion11Top.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		jump = true
+	})
+
+	const copyQuestion11Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	copyQuestion11Bottom.position.set(129.2, 7.65, .5)
+	copyQuestion11Bottom.rotation.x = -Math.PI/2
+	scene.add(copyQuestion11Bottom)
+
+	copyQuestion11Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		
+	})
+
 	
 	//////////////////////
 	//Fourth Section Blocks
@@ -279,16 +343,50 @@ const initBlocks = () => {
 	copyQuestion12.position.set(176.5, 3.8, .5)
 	scene.add(copyQuestion12)
 	
+	const copyQuestion12Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	copyQuestion12Top.position.set(176.5, 4.35, .5)
+	copyQuestion12Top.rotation.x = -Math.PI/2
+	scene.add(copyQuestion12Top)
 
+	copyQuestion12Top.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		jump = true
+	})
 
+	const copyQuestion12Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	copyQuestion12Bottom.position.set(176.5, 3.25, .5)
+	copyQuestion12Bottom.rotation.x = -Math.PI/2
+	scene.add(copyQuestion12Bottom)
 
+	copyQuestion12Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		
+	})
+	
 
-
-
+	//////////////////////
 	//Invisible Block
+	//////////////////////
 	
 	const blank = new Physijs.BoxMesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshPhongMaterial({map: blankLoader}), 0)
 	blank.position.set(51.25, 5, .5)
 	scene.add(blank)
 	
+	const blankTop = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	blankTop.position.set(51.25, 5.55, .5)
+	blankTop.rotation.x = -Math.PI/2
+	scene.add(blankTop)
+
+	blankTop.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		jump = true
+	})
+
+	const blankBottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	blankBottom.position.set(51.25, 4.45, .5)
+	blankBottom.rotation.x = -Math.PI/2
+	scene.add(blankBottom)
+
+	blankBottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		
+	})
+
 }
+

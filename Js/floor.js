@@ -79,16 +79,11 @@ const initFloor = () => {
 	//First Section
 	////////////////
 
-	const meshFloor = new Physijs.BoxMesh(
-		new THREE.BoxGeometry(81.5, 2, 2),
-		floorSide,
-		0
-	)
+	const meshFloor = new Physijs.BoxMesh(new THREE.BoxGeometry(81.5, 2, 2), floorSide, 0)
 	meshFloor.position.set(15.75, -1, .5)
 	scene.add(meshFloor)
-
 	meshFloor.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-    	jump = true
+		jump = true
 	})
 
 
@@ -96,15 +91,11 @@ const initFloor = () => {
 	//Second Section
 	////////////////
 
-	const smallFloor = new Physijs.BoxMesh(
-		new THREE.BoxGeometry(17.66, 2, 2),
-		smallFloorSide,
-		0
-	)
+	const smallFloor = new Physijs.BoxMesh(new THREE.BoxGeometry(17.66, 2, 2), smallFloorSide, 0)
 	smallFloor.position.set(67.85, -1, .5)
 	scene.add(smallFloor)
 	smallFloor.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-    	jump = true
+		jump = true
 	})
 
 
@@ -113,30 +104,22 @@ const initFloor = () => {
 	//Third Section
 	////////////////
 
-	const floorSet2 = new Physijs.BoxMesh(
-		new THREE.BoxGeometry(75.6, 2, 2),
-		floorSet2Side,
-		0
-	)
+	const floorSet2 = new Physijs.BoxMesh(new THREE.BoxGeometry(75.6, 2, 2), floorSet2Side, 0)
 	floorSet2.position.set(118.05, -1, .5)
 	scene.add(floorSet2)
 	floorSet2.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-    	jump = true
+		jump = true
 	})
 
 	////////////////
 	//Fourth Section
 	////////////////
 
-	const floorSet3 = new Physijs.BoxMesh(
-		new THREE.BoxGeometry(66.7, 2, 2),
-		floorSet3Side,
-		0
-	)
+	const floorSet3 = new Physijs.BoxMesh(new THREE.BoxGeometry(66.7, 2, 2), floorSet3Side, 0)
 	floorSet3.position.set(191.6, -1, .5)
 	scene.add(floorSet3)
 	floorSet3.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-    	jump = true
+		jump = true
 	})
 
 }
