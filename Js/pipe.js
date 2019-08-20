@@ -35,15 +35,7 @@ initPipes = () => {
 	)
 	pipe.position.set(9.3, 1, 0.5)
 	scene.add(pipe)
-	pipe.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		if (keyboard[65]) {
-			playerBox.position.x += 1 
-		} else if (keyboard[68]) {
-			playerBox.position.x -= 1
-		}
-	})
-
-
+	
 	//Second Pipe
 
 	const pipe2 = new Physijs.BoxMesh(
