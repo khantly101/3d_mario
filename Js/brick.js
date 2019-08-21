@@ -560,18 +560,86 @@ const initBricks = () => {
 	///////////////////
 	
 	//Second Lower Section
+
+	///////////////////
 	
 	const copyBrick20 = new Physijs.BoxMesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshPhongMaterial({map: brickLoader,}), 0)
 	copyBrick20.position.set(115.05, 3.8, .5)
 	scene.add(copyBrick20)
+
+	const copyBrick20Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	copyBrick20Top.position.set(115.05, 4.35, .5)
+	copyBrick20Top.rotation.x = -Math.PI/2
+	scene.add(copyBrick20Top)
+
+	copyBrick20Top.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		jump = true
+	})
+
+	const copyBrick20Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	copyBrick20Bottom.position.set(115.05, 3.25, .5)
+	copyBrick20Bottom.rotation.x = -Math.PI/2
+	scene.add(copyBrick20Bottom)
+
+	copyBrick20Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		scene.remove(copyBrick20)
+		scene.remove(copyBrick20Top)
+		scene.remove(copyBrick20Bottom)
+	})
+
+	///////////////////
 	
 	const copyBrick21 = new Physijs.BoxMesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshPhongMaterial({map: brickLoader,}), 0)
 	copyBrick21.position.set(128, 3.8, .5)
 	scene.add(copyBrick21)
 	
+	const copyBrick21Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	copyBrick21Top.position.set(128, 4.35, .5)
+	copyBrick21Top.rotation.x = -Math.PI/2
+	scene.add(copyBrick21Top)
+
+	copyBrick21Top.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		jump = true
+	})
+
+	const copyBrick21Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	copyBrick21Bottom.position.set(128, 3.25, .5)
+	copyBrick21Bottom.rotation.x = -Math.PI/2
+	scene.add(copyBrick21Bottom)
+
+	copyBrick21Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		scene.remove(copyBrick21)
+		scene.remove(copyBrick21Top)
+		scene.remove(copyBrick21Bottom)
+	})
+
+	///////////////////
+
 	const copyBrick22 = new Physijs.BoxMesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshPhongMaterial({map: brickLoader,}), 0)
 	copyBrick22.position.set(129.05, 3.8, .5)
 	scene.add(copyBrick22)
+
+	const copyBrick22Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	copyBrick22Top.position.set(129.05, 4.35, .5)
+	copyBrick22Top.rotation.x = -Math.PI/2
+	scene.add(copyBrick22Top)
+
+	copyBrick22Top.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		jump = true
+	})
+
+	const copyBrick22Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	copyBrick22Bottom.position.set(129.05, 3.25, .5)
+	copyBrick22Bottom.rotation.x = -Math.PI/2
+	scene.add(copyBrick22Bottom)
+
+	copyBrick22Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		scene.remove(copyBrick22)
+		scene.remove(copyBrick22Top)
+		scene.remove(copyBrick22Bottom)
+	})
+
+	///////////////////
 	
 	//Second Upper Section
 
@@ -710,17 +778,85 @@ const initBricks = () => {
 	//Fourth Section Blocks
 	//////////////////////
 
+	///////////////////
+
 	const copyBrick28 = new Physijs.BoxMesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshPhongMaterial({map: brickLoader,}), 0)
 	copyBrick28.position.set(174.40, 3.8, .5)
 	scene.add(copyBrick28)
+
+	const copyBrick28Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	copyBrick28Top.position.set(174.40, 4.35, .5)
+	copyBrick28Top.rotation.x = -Math.PI/2
+	scene.add(copyBrick28Top)
+
+	copyBrick28Top.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		jump = true
+	})
+
+	const copyBrick28Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	copyBrick28Bottom.position.set(174.40, 3.25, .5)
+	copyBrick28Bottom.rotation.x = -Math.PI/2
+	scene.add(copyBrick28Bottom)
+
+	copyBrick28Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		scene.remove(copyBrick28)
+		scene.remove(copyBrick28Top)
+		scene.remove(copyBrick28Bottom)
+	})
+
+	///////////////////
 	
 	const copyBrick29 = new Physijs.BoxMesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshPhongMaterial({map: brickLoader,}), 0)
 	copyBrick29.position.set(175.45, 3.8, .5)
 	scene.add(copyBrick29)
+
+	const copyBrick29Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	copyBrick29Top.position.set(175.45, 4.35, .5)
+	copyBrick29Top.rotation.x = -Math.PI/2
+	scene.add(copyBrick29Top)
+
+	copyBrick29Top.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		jump = true
+	})
+
+	const copyBrick29Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	copyBrick29Bottom.position.set(175.45, 3.25, .5)
+	copyBrick29Bottom.rotation.x = -Math.PI/2
+	scene.add(copyBrick29Bottom)
+
+	copyBrick29Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		scene.remove(copyBrick29)
+		scene.remove(copyBrick29Top)
+		scene.remove(copyBrick29Bottom)
+	})
+
+	///////////////////
 	
 	const copyBrick30 = new Physijs.BoxMesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshPhongMaterial({map: brickLoader,}), 0)
 	copyBrick30.position.set(177.55, 3.8, .5)
 	scene.add(copyBrick30)
+
+	const copyBrick30Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	copyBrick30Top.position.set(177.55, 4.35, .5)
+	copyBrick30Top.rotation.x = -Math.PI/2
+	scene.add(copyBrick30Top)
+
+	copyBrick30Top.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		jump = true
+	})
+
+	const copyBrick30Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	copyBrick30Bottom.position.set(177.55, 3.25, .5)
+	copyBrick30Bottom.rotation.x = -Math.PI/2
+	scene.add(copyBrick30Bottom)
+
+	copyBrick30Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		scene.remove(copyBrick30)
+		scene.remove(copyBrick30Top)
+		scene.remove(copyBrick30Bottom)
+	})
+
+	///////////////////
 
 
 }
