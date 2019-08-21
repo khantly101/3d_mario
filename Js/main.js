@@ -52,7 +52,11 @@ const initScene = () => {
 	scene.add(playerBox)
 	playerBox.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
 		if (other_object.geometry.id === goomba.geometry.id) {
-			scene.remove(goomba)
+			if (playerBox.position.y > goomba.position.y) {
+				scene.remove(goomba)
+			} else {
+				scene.remove(playerBox)
+			}
 		}
 	})
 
@@ -71,9 +75,11 @@ const animate = () => {
     	goomba.__dirtyRotation = true
 	}
 
-	playerBox.rotation.set(0, 0, 0)
-	playerBox.position.z = 0
-    playerBox.__dirtyRotation = true
+	if (playerBox.parent === scene) {
+		playerBox.rotation.set(0, 0, 0)
+		playerBox.position.z = 0
+	    playerBox.__dirtyRotation = true
+	}
 
 	if (keyboard[65] && !keyboard[87]) {
 		velocity = playerBox.getLinearVelocity()
