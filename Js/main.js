@@ -1,19 +1,20 @@
 const keyboard 	= {}
-const player 	= { height: 2.8 , speed: .2}
+const player 	= {height: 2.8 , speed: 0.2}
+const goombaSd 	= {speed: 2} 
 const Loader 	= new THREE.TextureLoader()
 const scene 	= new Physijs.Scene({fixedTimeStep: 1 / 60})
-const camera 	= new THREE.PerspectiveCamera( 90, window.innerWidth / window.innerHeight , 1, 1000 )
+const camera 	= new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight , 1, 1000)
 
-let renderer, previous
+let renderer, previous, goomba
 let jump = true
 
 const initScene = () => {
-	renderer = new THREE.WebGLRenderer({ antialias: true })
-	renderer.setSize( window.innerWidth -4, window.innerHeight -4)
-	document.body.appendChild( renderer.domElement )
+	renderer = new THREE.WebGLRenderer({antialias: true})
+	renderer.setSize(window.innerWidth -4, window.innerHeight -4)
+	document.body.appendChild(renderer.domElement)
 
 	scene.background = new THREE.Color(0x5c94fc)
-	scene.setGravity(new THREE.Vector3( 0, -30, 0 ))
+	scene.setGravity(new THREE.Vector3(0, -30, 0))
 
 	camera.position.set(0, player.height, 20)
 	camera.lookAt(new THREE.Vector3(0, player.height, 0))
@@ -39,16 +40,21 @@ const initScene = () => {
 	initBricks()
 	initSteps()
 	initPipes()
+	initEnemy()
 	animate()
 }
 
 
 
 	const playerMaterial = Physijs.createMaterial(new THREE.MeshPhongMaterial({color: 0x00ff00}))
-	const playerBox = new Physijs.BoxMesh(new THREE.BoxGeometry(1,1,1), playerMaterial, 1)
+	const playerBox = new Physijs.BoxMesh(new THREE.BoxGeometry(1, 1, 1), playerMaterial, 1)
 	playerBox.position.set(0, 0.5, 0)
 	scene.add(playerBox)
-
+	playerBox.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		if (other_object.geometry.id === goomba.geometry.id) {
+			scene.remove(goomba)
+		}
+	})
 
 
 
@@ -56,9 +62,17 @@ const initScene = () => {
 
 const animate = () => {
 	scene.simulate()
-	requestAnimationFrame( animate )
+	requestAnimationFrame(animate)
 
-	playerBox.rotation.set(0, 0, 0);
+	if (goomba.parent === scene) {
+		goomba.setLinearVelocity({x: goombaSd.speed, y: 0, z: 0})
+		goomba.rotation.set(0, 0, 0)
+		goomba.position.y = .6
+    	goomba.__dirtyRotation = true
+	}
+
+	playerBox.rotation.set(0, 0, 0)
+	playerBox.position.z = 0
     playerBox.__dirtyRotation = true
 
 	if (keyboard[65] && !keyboard[87]) {
