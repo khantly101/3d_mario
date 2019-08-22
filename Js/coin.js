@@ -29,7 +29,7 @@ const initCoin = (x, y) => {
 	let coin = new Physijs.BoxMesh(new THREE.BoxGeometry(1, 1, 1), coinSides, 1)
 	coin.position.set(x, y + 1.5, 0)
 	scene.add(coin)
-	coin.setLinearVelocity({x: 0, y: 10, z: 0})
+	coin.setLinearVelocity({x: 0, y: 9, z: 0})
 	coin.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
 		scene.remove(coin)
 	})
