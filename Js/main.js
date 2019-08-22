@@ -70,7 +70,8 @@ const initScene = () => {
 
 	jump = true
 
-	playerBox.position.set(0, 0.5, 0.25)
+	// playerBox.position.set(0, 0.5, 0.25)
+	playerBox.position.set(80, -170, 0.25)
 	scene.add(playerBox)
 
 	initFloor()
