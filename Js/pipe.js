@@ -31,6 +31,12 @@ initPipes = () => {
 	const pipe = new Physijs.BoxMesh(new THREE.CylinderGeometry(1, 1, 2, 32 ), pipeSides, 0)
 	pipe.position.set(9.3, 1, 0.5)
 	scene.add(pipe)
+	pipe.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		if (other_object.geometry.id !== playerBox.geometry.id) {
+			mushroomSd.speed = -mushroomSd.speed
+			other_object.setLinearVelocity({x: mushroomSd.speed, y: 0, z: 0})
+		}
+	})
 
 	const pipeTop = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	pipeTop.position.set(9.8, 2.1, .5)

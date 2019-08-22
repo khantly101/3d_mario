@@ -37,7 +37,9 @@ const initBlocks = () => {
 	scene.add(questionBottom)
 
 	questionBottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-
+		initCoin(-5.5, 3.8)
+		question.material.map = blankLoader
+		scene.remove(questionBottom)
 	})
 
 	///////////////////
@@ -65,7 +67,9 @@ const initBlocks = () => {
 	scene.add(copyQuestionBottom)
 
 	copyQuestionBottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		
+		initMushroom(0.55, 3.8)
+		copyQuestion.material.map = blankLoader
+		scene.remove(copyQuestionBottom)
 	})
 
 	///////////////////
@@ -89,7 +93,9 @@ const initBlocks = () => {
 	scene.add(copyQuestion2Bottom)
 
 	copyQuestion2Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		
+		initCoin(2.65, 3.8)
+		copyQuestion2.material.map = blankLoader
+		scene.remove(copyQuestion2Bottom)
 	})
 
 	///////////////////
@@ -117,7 +123,9 @@ const initBlocks = () => {
 	scene.add(copyQuestion3Bottom)
 
 	copyQuestion3Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		
+		initCoin(1.6, 8.2)
+		copyQuestion3.material.map = blankLoader
+		scene.remove(copyQuestion3Bottom)
 	})
 
 	
@@ -144,7 +152,9 @@ const initBlocks = () => {
 	scene.add(copyQuestion4Bottom)
 
 	copyQuestion4Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		
+		initMushroom(67.75, 3.8)
+		copyQuestion4.material.map = blankLoader
+		scene.remove(copyQuestion4Bottom)
 	})
 
 
@@ -175,7 +185,9 @@ const initBlocks = () => {
 	scene.add(copyQuestion5Bottom)
 
 	copyQuestion5Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		
+		initCoin(86.7, 8.2)
+		copyQuestion5.material.map = blankLoader
+		scene.remove(copyQuestion5Bottom)
 	})
 
 	///////////////////
@@ -203,7 +215,9 @@ const initBlocks = () => {
 	scene.add(copyQuestion6Bottom)
 
 	copyQuestion6Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		
+		initCoin(100.85, 3.8)
+		copyQuestion6.material.map = blankLoader
+		scene.remove(copyQuestion6Bottom)
 	})
 
 	///////////////////
@@ -227,7 +241,9 @@ const initBlocks = () => {
 	scene.add(copyQuestion7Bottom)
 
 	copyQuestion7Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		
+		initCoin(104.4, 3.8)
+		copyQuestion7.material.map = blankLoader
+		scene.remove(copyQuestion7Bottom)
 	})
 
 	///////////////////
@@ -251,7 +267,9 @@ const initBlocks = () => {
 	scene.add(copyQuestion8Bottom)
 
 	copyQuestion8Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		
+		initCoin(107.95, 3.8)
+		copyQuestion8.material.map = blankLoader
+		scene.remove(copyQuestion8Bottom)
 	})
 
 	///////////////////
@@ -279,7 +297,9 @@ const initBlocks = () => {
 	scene.add(copyQuestion9Bottom)
 
 	copyQuestion9Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		
+		initMushroom(104.4, 8.2)
+		copyQuestion9.material.map = blankLoader
+		scene.remove(copyQuestion9Bottom)
 	})
 
 	///////////////////
@@ -307,7 +327,9 @@ const initBlocks = () => {
 	scene.add(copyQuestion10Bottom)
 
 	copyQuestion10Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		
+		initCoin(128.15, 8.2)
+		copyQuestion10.material.map = blankLoader
+		scene.remove(copyQuestion10Bottom)
 	})
 
 	///////////////////
@@ -331,7 +353,9 @@ const initBlocks = () => {
 	scene.add(copyQuestion11Bottom)
 
 	copyQuestion11Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		
+		initCoin(129.2, 8.2)
+		copyQuestion11.material.map = blankLoader
+		scene.remove(copyQuestion11Bottom)
 	})
 
 	
@@ -358,7 +382,9 @@ const initBlocks = () => {
 	scene.add(copyQuestion12Bottom)
 
 	copyQuestion12Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		
+		initCoin(176.5, 3.8)
+		copyQuestion12.material.map = blankLoader
+		scene.remove(copyQuestion12Bottom)
 	})
 	
 
@@ -368,12 +394,10 @@ const initBlocks = () => {
 	
 	const blank = new Physijs.BoxMesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshPhongMaterial({map: blankLoader}), 0)
 	blank.position.set(51.25, 5, .5)
-	scene.add(blank)
 	
 	const blankTop = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	blankTop.position.set(51.25, 5.55, .5)
 	blankTop.rotation.x = -Math.PI/2
-	scene.add(blankTop)
 
 	blankTop.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
 		jump = true
@@ -385,7 +409,12 @@ const initBlocks = () => {
 	scene.add(blankBottom)
 
 	blankBottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		
+		if (blankBottom.position.y > other_object.position.y) {
+			init1Up(51.25, 5)
+			scene.remove(blankBottom)
+			scene.add(blank)
+			scene.add(blankTop)
+		}
 	})
 
 }

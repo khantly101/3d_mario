@@ -84,6 +84,9 @@ const initFloor = () => {
 	scene.add(meshFloor)
 	meshFloor.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
 		jump = true
+		if (other_object.geometry.id !== playerBox.geometry.id) {
+			other_object.setLinearVelocity({x: mushroomSd.speed, y: 0, z: 0})
+		}
 	})
 
 
