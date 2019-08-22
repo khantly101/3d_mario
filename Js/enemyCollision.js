@@ -4,6 +4,11 @@ const enemyCollision = (other_object) => {
 			scene.remove(goomba)
 		} else {
 			scene.remove(playerBox)
+			// while(scene.children.length > 0){ 
+			// 	scene.remove(scene.children[0])
+			// }
+			// document.body.removeChild(renderer.domElement)
+			// initScene()
 		}
 	}
 

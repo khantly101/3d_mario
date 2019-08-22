@@ -7,9 +7,9 @@ const oneUpLoader 				= new Loader.load("Textures/1Up.png")
 const transparentMushroomLoader = new Loader.load("Textures/transparent.png")
 
 
-////////////////
+//////////////////////
 //Sides
-////////////////
+//////////////////////
 
 const mushroomSide = [
 	new THREE.MeshPhongMaterial({map: transparentMushroomLoader, transparent: true, depthWrite: false, depthTest: false}),
@@ -30,9 +30,9 @@ const oneUpSide = [
 ]
 
 
-////////////////
+//////////////////////
 //Init Function
-////////////////
+//////////////////////
 
 const initMushroom = (x, y) => {
 

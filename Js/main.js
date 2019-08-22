@@ -1,8 +1,21 @@
+//////////////////////
+//Variables
+//////////////////////
+
 const keyboard 		= {}
 const player 		= {height: 2.8 , speed: 0.2}
 const goombaSd 		= {first: 2, second: 2, third: 2, twelfth: 2, thirteenth: 2}
 const mushroomSd 	= {speed: 10}
 const marioR 		= {right: 0, left: 0}
+
+let renderer, playerBox
+let jump = true
+
+
+//////////////////////
+//Loaders
+//////////////////////
+
 const Loader 		= new THREE.TextureLoader()
 const audioLoader 	= new THREE.AudioLoader()
 const listener 		= new THREE.AudioListener()
@@ -12,8 +25,10 @@ const jsound 		= new THREE.Audio(Jlistener)
 const scene 		= new Physijs.Scene({fixedTimeStep: 1 / 60})
 const camera 		= new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight , 1, 1000)
 
-let renderer, playerBox
-let jump = true
+
+//////////////////////
+//Init Function
+//////////////////////
 
 const initScene = () => {
 	renderer = new THREE.WebGLRenderer({antialias: true})
@@ -23,8 +38,8 @@ const initScene = () => {
 	scene.background = new THREE.Color(0x5c94fc)
 	scene.setGravity(new THREE.Vector3(0, -30, 0))
 
-	camera.position.set(0, player.height, 20)
-	camera.lookAt(new THREE.Vector3(0, player.height, 0))
+	camera.position.set(100, -160, 20)
+	camera.lookAt(new THREE.Vector3(100, -160, 0))
 	scene.add(camera)
 
 	audioLoader.load('sounds/mario_theme.mp3', (buffer) => {
@@ -33,10 +48,6 @@ const initScene = () => {
 		sound.setVolume(0.5)
 		// sound.play()
 	})
-
-
-
-	scene.add(playerBox)
 
 	ambientLight = new THREE.AmbientLight(0xffffff, 1)
 	scene.add(ambientLight)
@@ -53,19 +64,29 @@ const initScene = () => {
 	foreground.position.set(100, 5.8, 1.6)
 	scene.add(foreground)
 
+	if (playerBox.parent === scene) {
+		scene.remove(playerBox)
+	}
+
+	jump = true
+
+	playerBox.position.set(0, 0.5, 0.25)
+	scene.add(playerBox)
+
 	initFloor()
 	initBlocks()
 	initBricks()
 	initSteps()
 	initPipes()
+	initUnderground()
 	initEnemy()
 	animate()
 }
 
 
-
-
-
+//////////////////////
+//Refresh Function
+//////////////////////
 
 const animate = () => {
 	scene.simulate()
@@ -184,6 +205,11 @@ const animate = () => {
 	renderer.render( scene, camera )
 }
 
+
+//////////////////////
+//Keypress Function
+//////////////////////
+
 const keyDown = (event) => {
 	keyboard[event.keyCode] = true
 }
@@ -201,5 +227,10 @@ const keyUp = (event) => {
 
 window.addEventListener('keydown', keyDown)
 window.addEventListener('keyup', keyUp)
+
+
+//////////////////////
+//Start Scene
+//////////////////////
 
 window.onload = initScene
