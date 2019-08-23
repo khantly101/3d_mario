@@ -27,6 +27,7 @@ Content not in remake
 
 All ui elements not added
 Super Star not added
+Fire Flower/Fireballs not added
 Touching mushrooms/coins only make sounds
 Koopa Trooper dies in one hit/no shells
 No crouching
