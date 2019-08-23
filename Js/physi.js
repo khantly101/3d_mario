@@ -485,7 +485,7 @@ window.Physijs = (function() {
 
 
 		params = params || {};
-		params.ammo = Physijs.scripts.ammo || 'Js/ammo.js';
+		params.ammo = Physijs.scripts.ammo || '/Js/ammo.js';
 		params.fixedTimeStep = params.fixedTimeStep || 1 / 60;
 		params.rateLimit = params.rateLimit || true;
 		this.execute( 'init', params );
