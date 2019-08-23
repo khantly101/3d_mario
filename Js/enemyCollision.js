@@ -33,6 +33,7 @@ const enemyCollision = (other_object) => {
 			gsound.play()
 		} else {
 			scene.remove(playerBox)
+			sound.pause()
 			dsound.play()
 			setTimeout(()=>{reset()}, 2500)
 		}
@@ -44,6 +45,7 @@ const enemyCollision = (other_object) => {
 			gsound.play()
 		} else {
 			scene.remove(playerBox)
+			sound.pause()
 			dsound.play()
 			setTimeout(()=>{reset()}, 2500)
 		}
@@ -55,6 +57,7 @@ const enemyCollision = (other_object) => {
 			gsound.play()
 		} else {
 			scene.remove(playerBox)
+			sound.pause()
 			dsound.play()
 			setTimeout(()=>{reset()}, 2500)
 		}
@@ -66,6 +69,7 @@ const enemyCollision = (other_object) => {
 			gsound.play()
 		} else {
 			scene.remove(playerBox)
+			sound.pause()
 			dsound.play()
 			setTimeout(()=>{reset()}, 2500)
 		}
@@ -77,6 +81,7 @@ const enemyCollision = (other_object) => {
 			gsound.play()
 		} else {
 			scene.remove(playerBox)
+			sound.pause()
 			dsound.play()
 			setTimeout(()=>{reset()}, 2500)
 		}
@@ -88,6 +93,7 @@ const enemyCollision = (other_object) => {
 			gsound.play()
 		} else {
 			scene.remove(playerBox)
+			sound.pause()
 			dsound.play()
 			setTimeout(()=>{reset()}, 2500)
 		}
@@ -99,6 +105,7 @@ const enemyCollision = (other_object) => {
 			gsound.play()
 		} else {
 			scene.remove(playerBox)
+			sound.pause()
 			dsound.play()
 			setTimeout(()=>{reset()}, 2500)
 		}
@@ -110,6 +117,7 @@ const enemyCollision = (other_object) => {
 			gsound.play()
 		} else {
 			scene.remove(playerBox)
+			sound.pause()
 			dsound.play()
 			setTimeout(()=>{reset()}, 2500)
 		}
@@ -121,6 +129,7 @@ const enemyCollision = (other_object) => {
 			gsound.play()
 		} else {
 			scene.remove(playerBox)
+			sound.pause()
 			dsound.play()
 			setTimeout(()=>{reset()}, 2500)
 		}
@@ -132,6 +141,7 @@ const enemyCollision = (other_object) => {
 			gsound.play()
 		} else {
 			scene.remove(playerBox)
+			sound.pause()
 			dsound.play()
 			setTimeout(()=>{reset()}, 2500)
 		}
@@ -143,6 +153,7 @@ const enemyCollision = (other_object) => {
 			gsound.play()
 		} else {
 			scene.remove(playerBox)
+			sound.pause()
 			dsound.play()
 			setTimeout(()=>{reset()}, 2500)
 		}
@@ -154,6 +165,7 @@ const enemyCollision = (other_object) => {
 			gsound.play()
 		} else {
 			scene.remove(playerBox)
+			sound.pause()
 			dsound.play()
 			setTimeout(()=>{reset()}, 2500)
 		}
@@ -165,6 +177,7 @@ const enemyCollision = (other_object) => {
 			gsound.play()
 		} else {
 			scene.remove(playerBox)
+			sound.pause()
 			dsound.play()
 			setTimeout(()=>{reset()}, 2500)
 		}
@@ -176,6 +189,7 @@ const enemyCollision = (other_object) => {
 			gsound.play()
 		} else {
 			scene.remove(playerBox)
+			sound.pause()
 			dsound.play()
 			setTimeout(()=>{reset()}, 2500)
 		}
@@ -187,6 +201,7 @@ const enemyCollision = (other_object) => {
 			gsound.play()
 		} else {
 			scene.remove(playerBox)
+			sound.pause()
 			dsound.play()
 			setTimeout(()=>{reset()}, 2500)
 

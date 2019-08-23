@@ -136,6 +136,7 @@ const initFloor = () => {
 	underFloor.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
 		scene.remove(other_object)
 		if (other_object.geometry.id === playerBox.geometry.id) {
+			sound.pause()
 			dsound.play()
 			setTimeout(()=>{reset()}, 2500)
 		}
@@ -152,6 +153,7 @@ const initFloor = () => {
 	scene.add(victory)
 	victory.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
 		if (!win) {
+			sound.pause()
 			wsound.play()
 			win = true
 			setTimeout(()=>{reset()}, 5500)
