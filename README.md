@@ -33,9 +33,13 @@ Koopa Trooper dies in one hit/no shells
 No crouching
 No win animation, only sound
 Enemies does not die when breaking blocks underneath
+Brick breaking animation not added
+Death Animation not added
 
 Issues
 Stuttering at startup
 Mushroom movement inconsistent
 Jumping inconsistent
 In order to use warp pipe, S must be held down as player touches
+Same audio cannot play in quick succession
+Exiting the warp pipe back to the overworld is inconsistent
