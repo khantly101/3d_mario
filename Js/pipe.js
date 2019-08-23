@@ -16,6 +16,21 @@ const pipeSides = [
 	new THREE.MeshPhongMaterial({color: 0x0fdc0a})
 ]
 
+
+//////////////////////
+//Sound
+//////////////////////
+
+const pipelistener 	= new THREE.AudioListener()
+const pipesound 	= new THREE.Audio(pipelistener)
+
+audioLoader.load('sounds/pipe.wav', (buffer) => {
+	pipesound.setBuffer(buffer)
+	pipesound.setLoop(false)
+	pipesound.setVolume(0.5)
+})
+
+
 //////////////////////
 //Init Function
 //////////////////////
@@ -136,7 +151,14 @@ initPipes = () => {
 	scene.add(pipe4Top2)
 
 	pipe4Top.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (keyboard[83]) {
+			playerBox.position.set(80, -170, 0.25)
+			playerBox.__dirtyPosition = true
+			camera.position.set(100, -160, 20)
+			pipesound.play()
+		} else {
+			jump = true
+		}
 	})
 
 	pipe4Top2.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {

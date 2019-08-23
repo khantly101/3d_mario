@@ -4,6 +4,19 @@
 
 const brickLoader = new Loader.load("Textures/Brick_Block.png")
 
+//////////////////////
+//Sound
+//////////////////////
+
+const blistener 	= new THREE.AudioListener()
+const bsound 		= new THREE.Audio(blistener)
+
+audioLoader.load('sounds/brick.wav', (buffer) => {
+	bsound.setBuffer(buffer)
+	bsound.setLoop(false)
+	bsound.setVolume(0.5)
+})
+
 
 //////////////////////
 //Init Function
@@ -39,6 +52,7 @@ const initBricks = () => {
 		scene.remove(brick)
 		scene.remove(brickTop)
 		scene.remove(brickBottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -65,6 +79,7 @@ const initBricks = () => {
 		scene.remove(copyBrick)
 		scene.remove(copyBrickTop)
 		scene.remove(copyBrickBottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -91,6 +106,7 @@ const initBricks = () => {
 		scene.remove(copyBrick2)
 		scene.remove(copyBrick2Top)
 		scene.remove(copyBrick2Bottom)
+		bsound.play()
 	})
 	
 
@@ -124,6 +140,7 @@ const initBricks = () => {
 		scene.remove(copyBrick3)
 		scene.remove(copyBrick3Top)
 		scene.remove(copyBrick3Bottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -150,6 +167,7 @@ const initBricks = () => {
 		scene.remove(copyBrick4)
 		scene.remove(copyBrick4Top)
 		scene.remove(copyBrick4Bottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -180,6 +198,7 @@ const initBricks = () => {
 		scene.remove(copyBrick5)
 		scene.remove(copyBrick5Top)
 		scene.remove(copyBrick5Bottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -206,6 +225,7 @@ const initBricks = () => {
 		scene.remove(copyBrick6)
 		scene.remove(copyBrick6Top)
 		scene.remove(copyBrick6Bottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -232,6 +252,7 @@ const initBricks = () => {
 		scene.remove(copyBrick7)
 		scene.remove(copyBrick7Top)
 		scene.remove(copyBrick7Bottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -258,6 +279,7 @@ const initBricks = () => {
 		scene.remove(copyBrick8)
 		scene.remove(copyBrick8Top)
 		scene.remove(copyBrick8Bottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -284,6 +306,7 @@ const initBricks = () => {
 		scene.remove(copyBrick9)
 		scene.remove(copyBrick9Top)
 		scene.remove(copyBrick9Bottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -310,6 +333,7 @@ const initBricks = () => {
 		scene.remove(copyBrick10)
 		scene.remove(copyBrick10Top)
 		scene.remove(copyBrick10Bottom)
+		bsound.play()
 	})
 	
 	///////////////////
@@ -336,6 +360,7 @@ const initBricks = () => {
 		scene.remove(copyBrick11)
 		scene.remove(copyBrick11Top)
 		scene.remove(copyBrick11Bottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -362,6 +387,7 @@ const initBricks = () => {
 		scene.remove(copyBrick12)
 		scene.remove(copyBrick12Top)
 		scene.remove(copyBrick12Bottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -388,6 +414,7 @@ const initBricks = () => {
 		scene.remove(copyBrick13)
 		scene.remove(copyBrick13Top)
 		scene.remove(copyBrick13Bottom)
+		bsound.play()
 	})
 
 
@@ -421,6 +448,7 @@ const initBricks = () => {
 		scene.remove(copyBrick14)
 		scene.remove(copyBrick14Top)
 		scene.remove(copyBrick14Bottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -447,6 +475,7 @@ const initBricks = () => {
 		scene.remove(copyBrick15)
 		scene.remove(copyBrick15Top)
 		scene.remove(copyBrick15Bottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -473,6 +502,7 @@ const initBricks = () => {
 		scene.remove(copyBrick16)
 		scene.remove(copyBrick16Top)
 		scene.remove(copyBrick16Bottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -503,6 +533,7 @@ const initBricks = () => {
 		scene.remove(copyBrick17)
 		scene.remove(copyBrick17Top)
 		scene.remove(copyBrick17Bottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -529,6 +560,7 @@ const initBricks = () => {
 		scene.remove(copyBrick18)
 		scene.remove(copyBrick18Top)
 		scene.remove(copyBrick18Bottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -555,6 +587,7 @@ const initBricks = () => {
 		scene.remove(copyBrick19)
 		scene.remove(copyBrick19Top)
 		scene.remove(copyBrick19Bottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -585,6 +618,7 @@ const initBricks = () => {
 		scene.remove(copyBrick20)
 		scene.remove(copyBrick20Top)
 		scene.remove(copyBrick20Bottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -611,6 +645,7 @@ const initBricks = () => {
 		scene.remove(copyBrick21)
 		scene.remove(copyBrick21Top)
 		scene.remove(copyBrick21Bottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -637,6 +672,7 @@ const initBricks = () => {
 		scene.remove(copyBrick22)
 		scene.remove(copyBrick22Top)
 		scene.remove(copyBrick22Bottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -667,6 +703,7 @@ const initBricks = () => {
 		scene.remove(copyBrick23)
 		scene.remove(copyBrick23Top)
 		scene.remove(copyBrick23Bottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -693,6 +730,7 @@ const initBricks = () => {
 		scene.remove(copyBrick24)
 		scene.remove(copyBrick24Top)
 		scene.remove(copyBrick24Bottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -719,6 +757,7 @@ const initBricks = () => {
 		scene.remove(copyBrick25)
 		scene.remove(copyBrick25Top)
 		scene.remove(copyBrick25Bottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -745,6 +784,7 @@ const initBricks = () => {
 		scene.remove(copyBrick26)
 		scene.remove(copyBrick26Top)
 		scene.remove(copyBrick26Bottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -771,6 +811,7 @@ const initBricks = () => {
 		scene.remove(copyBrick27)
 		scene.remove(copyBrick27Top)
 		scene.remove(copyBrick27Bottom)
+		bsound.play()
 	})
 
 
@@ -802,6 +843,7 @@ const initBricks = () => {
 		scene.remove(copyBrick28)
 		scene.remove(copyBrick28Top)
 		scene.remove(copyBrick28Bottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -828,6 +870,7 @@ const initBricks = () => {
 		scene.remove(copyBrick29)
 		scene.remove(copyBrick29Top)
 		scene.remove(copyBrick29Bottom)
+		bsound.play()
 	})
 
 	///////////////////
@@ -854,6 +897,7 @@ const initBricks = () => {
 		scene.remove(copyBrick30)
 		scene.remove(copyBrick30Top)
 		scene.remove(copyBrick30Bottom)
+		bsound.play()
 	})
 
 	///////////////////

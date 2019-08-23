@@ -125,4 +125,36 @@ const initFloor = () => {
 		jump = true
 	})
 
+	////////////////
+	//Under Floor
+	////////////////
+
+	const underFloor = new Physijs.BoxMesh(new THREE.PlaneGeometry(500, 500, 2), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	underFloor.position.set(0, -5, .5)
+	underFloor.rotation.x = -Math.PI/2
+	scene.add(underFloor)
+	underFloor.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		scene.remove(other_object)
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			dsound.play()
+			setTimeout(()=>{reset()}, 2500)
+		}
+	})
+
+
+	////////////////
+	//Win Panel
+	////////////////
+
+	const victory = new Physijs.BoxMesh(new THREE.PlaneGeometry(500, 500, 10), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	victory.position.set(209.6, .5, .5)
+	victory.rotation.y = -Math.PI/2
+	scene.add(victory)
+	victory.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
+		if (!win) {
+			wsound.play()
+			win = true
+			setTimeout(()=>{reset()}, 5500)
+		} 
+	})
 }

@@ -7,6 +7,29 @@ const blankLoader = new Loader.load("Textures/Hit_Block.png")
 
 
 //////////////////////
+//Sound
+//////////////////////
+
+const clistener 	= new THREE.AudioListener()
+const csound 		= new THREE.Audio(clistener)
+
+audioLoader.load('sounds/coin.wav', (buffer) => {
+	csound.setBuffer(buffer)
+	csound.setLoop(false)
+	csound.setVolume(0.5)
+})
+
+const mlistener 	= new THREE.AudioListener()
+const msound 		= new THREE.Audio(mlistener)
+
+audioLoader.load('sounds/mushroom_appear.wav', (buffer) => {
+	msound.setBuffer(buffer)
+	msound.setLoop(false)
+	msound.setVolume(0.5)
+})
+
+
+//////////////////////
 //Init Function
 //////////////////////
 
@@ -40,6 +63,7 @@ const initBlocks = () => {
 		initCoin(-5.5, 3.8)
 		question.material.map = blankLoader
 		scene.remove(questionBottom)
+		csound.play()
 	})
 
 	///////////////////
@@ -70,6 +94,7 @@ const initBlocks = () => {
 		initMushroom(0.55, 3.8)
 		copyQuestion.material.map = blankLoader
 		scene.remove(copyQuestionBottom)
+		msound.play()
 	})
 
 	///////////////////
@@ -96,6 +121,7 @@ const initBlocks = () => {
 		initCoin(2.65, 3.8)
 		copyQuestion2.material.map = blankLoader
 		scene.remove(copyQuestion2Bottom)
+		csound.play()
 	})
 
 	///////////////////
@@ -126,6 +152,7 @@ const initBlocks = () => {
 		initCoin(1.6, 8.2)
 		copyQuestion3.material.map = blankLoader
 		scene.remove(copyQuestion3Bottom)
+		csound.play()
 	})
 
 	
@@ -155,6 +182,7 @@ const initBlocks = () => {
 		initMushroom(67.75, 3.8)
 		copyQuestion4.material.map = blankLoader
 		scene.remove(copyQuestion4Bottom)
+		msound.play()
 	})
 
 
@@ -188,6 +216,7 @@ const initBlocks = () => {
 		initCoin(86.7, 8.2)
 		copyQuestion5.material.map = blankLoader
 		scene.remove(copyQuestion5Bottom)
+		csound.play()
 	})
 
 	///////////////////
@@ -218,6 +247,7 @@ const initBlocks = () => {
 		initCoin(100.85, 3.8)
 		copyQuestion6.material.map = blankLoader
 		scene.remove(copyQuestion6Bottom)
+		csound.play()
 	})
 
 	///////////////////
@@ -244,6 +274,7 @@ const initBlocks = () => {
 		initCoin(104.4, 3.8)
 		copyQuestion7.material.map = blankLoader
 		scene.remove(copyQuestion7Bottom)
+		csound.play()
 	})
 
 	///////////////////
@@ -270,6 +301,7 @@ const initBlocks = () => {
 		initCoin(107.95, 3.8)
 		copyQuestion8.material.map = blankLoader
 		scene.remove(copyQuestion8Bottom)
+		csound.play()
 	})
 
 	///////////////////
@@ -300,6 +332,7 @@ const initBlocks = () => {
 		initMushroom(104.4, 8.2)
 		copyQuestion9.material.map = blankLoader
 		scene.remove(copyQuestion9Bottom)
+		msound.play()
 	})
 
 	///////////////////
@@ -330,6 +363,7 @@ const initBlocks = () => {
 		initCoin(128.15, 8.2)
 		copyQuestion10.material.map = blankLoader
 		scene.remove(copyQuestion10Bottom)
+		csound.play()
 	})
 
 	///////////////////
@@ -356,6 +390,7 @@ const initBlocks = () => {
 		initCoin(129.2, 8.2)
 		copyQuestion11.material.map = blankLoader
 		scene.remove(copyQuestion11Bottom)
+		csound.play()
 	})
 
 	
@@ -385,6 +420,7 @@ const initBlocks = () => {
 		initCoin(176.5, 3.8)
 		copyQuestion12.material.map = blankLoader
 		scene.remove(copyQuestion12Bottom)
+		csound.play()
 	})
 	
 
@@ -414,6 +450,7 @@ const initBlocks = () => {
 			scene.remove(blankBottom)
 			scene.add(blank)
 			scene.add(blankTop)
+			msound.play()
 		}
 	})
 

@@ -10,6 +10,8 @@ const marioR 		= {right: 0, left: 0}
 
 let renderer, playerBox
 let jump = true
+let music = false
+let win = false
 
 
 //////////////////////
@@ -19,9 +21,11 @@ let jump = true
 const Loader 		= new THREE.TextureLoader()
 const audioLoader 	= new THREE.AudioLoader()
 const listener 		= new THREE.AudioListener()
-const Jlistener 	= new THREE.AudioListener()
+const jlistener 	= new THREE.AudioListener()
+const wlistener 	= new THREE.AudioListener()
 const sound 		= new THREE.Audio(listener)
-const jsound 		= new THREE.Audio(Jlistener)
+const jsound 		= new THREE.Audio(jlistener)
+const wsound 		= new THREE.Audio(wlistener)
 const scene 		= new Physijs.Scene({fixedTimeStep: 1 / 60})
 const camera 		= new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight , 1, 1000)
 
@@ -46,7 +50,18 @@ const initScene = () => {
 		sound.setBuffer(buffer)
 		sound.setLoop(true)
 		sound.setVolume(0.5)
-		// sound.play()
+	})
+
+	audioLoader.load('sounds/jump.wav', (buffer) => {
+		jsound.setBuffer(buffer)
+		jsound.setLoop(false)
+		jsound.setVolume(0.5)
+	})
+
+	audioLoader.load('sounds/win.wav', (buffer) => {
+		wsound.setBuffer(buffer)
+		wsound.setLoop(false)
+		wsound.setVolume(0.5)
 	})
 
 	ambientLight = new THREE.AmbientLight(0xffffff, 1)
@@ -69,6 +84,8 @@ const initScene = () => {
 	}
 
 	jump = true
+	music = false
+	win = false
 
 	// playerBox.position.set(0, 0.5, 0.25)
 	playerBox.position.set(80, -170, 0.25)
@@ -84,7 +101,6 @@ const initScene = () => {
 	animate()
 }
 
-
 //////////////////////
 //Refresh Function
 //////////////////////
@@ -94,7 +110,6 @@ const animate = () => {
 	requestAnimationFrame(animate)
 
 	enemyMovement()
-
 
 	let velocity = playerBox.getLinearVelocity()
 
@@ -140,12 +155,7 @@ const animate = () => {
 			if (jump) {
 				playerBox.setLinearVelocity({x: velocity.x, y: 15, z: velocity.z})
 				jump = false
-				audioLoader.load('sounds/jump.wav', (buffer) => {
-					jsound.setBuffer(buffer)
-					jsound.setLoop(false)
-					jsound.setVolume(0.5)
-					jsound.play()
-				})
+				jsound.play()
 			}
 		}
 	
@@ -153,12 +163,7 @@ const animate = () => {
 			if (jump) {
 				playerBox.setLinearVelocity({x: 5, y: 15, z: velocity.z})
 				jump = false
-				audioLoader.load('sounds/jump.wav', (buffer) => {
-					jsound.setBuffer(buffer)
-					jsound.setLoop(false)
-					jsound.setVolume(0.5)
-					jsound.play()
-				})
+				jsound.play()
 			}
 		}
 	
@@ -166,12 +171,7 @@ const animate = () => {
 			if (jump) {
 				playerBox.setLinearVelocity({x: -5, y: 15, z: velocity.z})
 				jump = false
-				audioLoader.load('sounds/jump.wav', (buffer) => {
-					jsound.setBuffer(buffer)
-					jsound.setLoop(false)
-					jsound.setVolume(0.5)
-					jsound.play()
-				})
+				jsound.play()
 			}
 		}
 	}
@@ -206,6 +206,18 @@ const animate = () => {
 	renderer.render( scene, camera )
 }
 
+//////////////////////
+//Restart Function
+//////////////////////
+
+const reset = () => {
+	while(scene.children.length > 0){ 
+		scene.remove(scene.children[0])
+	}
+	document.body.removeChild(renderer.domElement)
+	initScene()
+}
+
 
 //////////////////////
 //Keypress Function
@@ -213,6 +225,14 @@ const animate = () => {
 
 const keyDown = (event) => {
 	keyboard[event.keyCode] = true
+
+	if (keyboard[80] && music === false) {
+		sound.play()
+		music = true
+	} else if (keyboard[80] && music) {
+		sound.pause()
+		music = false
+	}
 }
 
 const keyUp = (event) => {

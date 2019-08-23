@@ -31,6 +31,29 @@ const oneUpSide = [
 
 
 //////////////////////
+//Sound
+//////////////////////
+
+const pulistener 	= new THREE.AudioListener()
+const pusound 		= new THREE.Audio(pulistener)
+
+audioLoader.load('sounds/powerup.wav', (buffer) => {
+	pusound.setBuffer(buffer)
+	pusound.setLoop(false)
+	pusound.setVolume(0.5)
+})
+
+const uplistener 	= new THREE.AudioListener()
+const upsound 		= new THREE.Audio(uplistener)
+
+audioLoader.load('sounds/1-up.wav', (buffer) => {
+	upsound.setBuffer(buffer)
+	upsound.setLoop(false)
+	upsound.setVolume(0.5)
+})
+
+
+//////////////////////
 //Init Function
 //////////////////////
 
@@ -43,8 +66,11 @@ const initMushroom = (x, y) => {
 	mushroom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
 		mushroom.rotation.set(0, 0, 0)
 		mushroom.__dirtyRotation = true
+		mushroom.position.y += .1
+		mushroom.setLinearVelocity({x: mushroomSd.speed, y: 0, z: 0})
 		if (other_object.geometry.id === playerBox.geometry.id) {
 			scene.remove(mushroom)
+			pusound.play()
 		}
 	})
 }
@@ -58,8 +84,11 @@ const init1Up = (x, y) => {
 	oneUp.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
 		oneUp.rotation.set(0, 0, 0)
 		oneUp.__dirtyRotation = true
+		oneUp.position.y += .1
+		oneUp.setLinearVelocity({x: mushroomSd.speed, y: 0, z: 0})
 		if (other_object.geometry.id === playerBox.geometry.id) {
 			scene.remove(oneUp)
+			upsound.play()
 		}
 	})
 }
