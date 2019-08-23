@@ -530,10 +530,16 @@ const initBricks = () => {
 	scene.add(copyBrick17Bottom)
 
 	copyBrick17Bottom.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		scene.remove(copyBrick17)
-		scene.remove(copyBrick17Top)
-		scene.remove(copyBrick17Bottom)
-		bsound.play()
+		if (count > 0) {
+			initCoin(86.7, 3.8)
+			csound.play()
+			count -= 1
+		} else {
+			initCoin(86.7, 3.8)
+			csound.play()
+			copyBrick17.material.map = blankLoader
+			scene.remove(copyBrick17Bottom)
+		}
 	})
 
 	///////////////////

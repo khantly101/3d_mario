@@ -152,10 +152,12 @@ initPipes = () => {
 
 	pipe4Top.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
 		if (keyboard[83]) {
-			playerBox.position.set(80, -170, 0.25)
+			playerBox.position.set(80, -159, 0.25)
 			playerBox.__dirtyPosition = true
-			camera.position.set(100, -160, 20)
+			camera.position.set(90, -168.5, 13)
+			camera.rotation.y = 0
 			pipesound.play()
+			underground = true
 		} else {
 			jump = true
 		}

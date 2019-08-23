@@ -144,8 +144,10 @@ const initUnderground = () => {
 	undergroundPipeTop.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
 		playerBox.position.set(168.85, 3, 0.25)
 		playerBox.__dirtyPosition = true
-		camera.position.set(168.85, 0, 20)
+		camera.position.set(168.85, 5, 12)
+		camera.rotation.y = 0
 		pipesound.play()
+		underground = false
 	})
 
 	const undergroundPipeLong = new Physijs.BoxMesh(new THREE.CylinderGeometry(1, 1, 50, 32 ), undergroundPipeSides, 0)

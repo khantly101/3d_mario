@@ -3,7 +3,6 @@
 //////////////////////
 
 const keyboard 		= {}
-const player 		= {height: 2.8 , speed: 0.2}
 const goombaSd 		= {first: 2, second: 2, third: 2, twelfth: 2, thirteenth: 2}
 const mushroomSd 	= {speed: 10}
 const marioR 		= {right: 0, left: 0}
@@ -12,6 +11,8 @@ let renderer, playerBox
 let jump = true
 let music = false
 let win = false
+let underground = false
+let count = 8
 
 
 //////////////////////
@@ -27,7 +28,7 @@ const sound 		= new THREE.Audio(listener)
 const jsound 		= new THREE.Audio(jlistener)
 const wsound 		= new THREE.Audio(wlistener)
 const scene 		= new Physijs.Scene({fixedTimeStep: 1 / 60})
-const camera 		= new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight , 1, 1000)
+const camera 		= new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight , 1, 1000)
 
 
 //////////////////////
@@ -42,8 +43,8 @@ const initScene = () => {
 	scene.background = new THREE.Color(0x5c94fc)
 	scene.setGravity(new THREE.Vector3(0, -30, 0))
 
-	camera.position.set(100, -160, 20)
-	camera.lookAt(new THREE.Vector3(100, -160, 0))
+	camera.position.set(-9, 5, 12)
+	camera.lookAt(new THREE.Vector3(-9, 5, 12))
 	scene.add(camera)
 
 	audioLoader.load('sounds/mario_theme.mp3', (buffer) => {
@@ -86,9 +87,11 @@ const initScene = () => {
 	jump = true
 	music = false
 	win = false
+	underground = false
+	count = 8
 
-	// playerBox.position.set(0, 0.5, 0.25)
-	playerBox.position.set(80, -170, 0.25)
+	playerBox.position.set(-20, 0.5, 0.25)
+
 	scene.add(playerBox)
 
 	initFloor()
@@ -112,6 +115,12 @@ const animate = () => {
 	enemyMovement()
 
 	let velocity = playerBox.getLinearVelocity()
+
+	if (!underground) {
+		if (playerBox.position.x > camera.position.x) {
+			camera.position.x += .09
+		}
+	}
 
 	if (playerBox.parent === scene) {
 		playerBox.rotation.set(0, 0, 0)
@@ -185,23 +194,23 @@ const animate = () => {
 		camera.rotation.y += Math.PI * 0.01
 	}
 
-	if (keyboard[40]) {
-		camera.position.y -= 0.1
-	}
+	// if (keyboard[40]) {
+	// 	camera.position.y -= 0.1
+	// }
 
-	if (keyboard[38]) {
-		camera.position.y += 0.1
-	}
+	// if (keyboard[38]) {
+	// 	camera.position.y += 0.1
+	// }
 
-	if (keyboard[37]) {
-		camera.position.x += Math.sin(camera.rotation.y - Math.PI/2) * player.speed
-		camera.position.z += Math.cos(camera.rotation.y - Math.PI/2) * player.speed
-	}
+	// if (keyboard[37]) {
+	// 	camera.position.x += Math.sin(camera.rotation.y - Math.PI/2) * .8
+	// 	camera.position.z += Math.cos(camera.rotation.y - Math.PI/2) * .8
+	// }
 
-	if (keyboard[39]) {
-		camera.position.x += Math.sin(camera.rotation.y + Math.PI/2) * player.speed
-		camera.position.z += Math.cos(camera.rotation.y + Math.PI/2) * player.speed
-	}	
+	// if (keyboard[39]) {
+	// 	camera.position.x += Math.sin(camera.rotation.y + Math.PI/2) * .8
+	// 	camera.position.z += Math.cos(camera.rotation.y + Math.PI/2) * .8
+	// }	
 	
 	renderer.render( scene, camera )
 }

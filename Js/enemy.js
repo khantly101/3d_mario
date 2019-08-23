@@ -42,6 +42,10 @@ const initEnemy = () => {
 
 	//First Group
 
+	goomba14 = new Physijs.BoxMesh(new THREE.BoxGeometry(1, 1, 1), goombaSides, 1)
+	goomba14.position.set(5, .5, 0.25)
+	scene.add(goomba14)
+
 	goomba = new Physijs.BoxMesh(new THREE.BoxGeometry(1, 1, 1), goombaSides, 1)
 	goomba.position.set(25, .5, .25)
 	scene.add(goomba)

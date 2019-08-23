@@ -26,6 +26,18 @@ audioLoader.load('sounds/death.wav', (buffer) => {
 //////////////////////
 
 const enemyCollision = (other_object) => {
+
+	if (other_object.geometry.id === goomba14.geometry.id) {
+		if (playerBox.position.y > goomba14.position.y) {
+			scene.remove(goomba14)
+			gsound.play()
+		} else {
+			scene.remove(playerBox)
+			dsound.play()
+			setTimeout(()=>{reset()}, 2500)
+		}
+	}
+	
 	if (other_object.geometry.id === goomba.geometry.id) {
 		if (playerBox.position.y > goomba.position.y) {
 			scene.remove(goomba)

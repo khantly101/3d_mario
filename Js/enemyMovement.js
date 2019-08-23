@@ -1,5 +1,12 @@
 const enemyMovement = () => {
 
+	if (goomba14.parent === scene) {
+		goomba14.setLinearVelocity({x: -5, y: 0, z: 0})
+		goomba14.rotation.set(0, 0, 0)
+		goomba14.position.y = .6
+		goomba14.__dirtyRotation = true
+	}
+
 	if (goomba.parent === scene) {
 		goomba.setLinearVelocity({x: goombaSd.first, y: 0, z: 0})
 		goomba.rotation.set(0, 0, 0)
