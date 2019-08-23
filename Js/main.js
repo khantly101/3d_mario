@@ -187,11 +187,15 @@ const animate = () => {
 
 	
 	if (keyboard[69]) {
-		camera.rotation.y -= Math.PI * 0.01
+		if (!underground) {
+			camera.rotation.y -= Math.PI * 0.01
+		}
 	}
 
 	if (keyboard[81]) {
-		camera.rotation.y += Math.PI * 0.01
+		if (!underground) {
+			camera.rotation.y += Math.PI * 0.01
+		}
 	}
 
 	// if (keyboard[40]) {
