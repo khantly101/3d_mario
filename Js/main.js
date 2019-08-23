@@ -112,7 +112,7 @@ const animate = () => {
 	scene.simulate()
 	requestAnimationFrame(animate)
 
-	// enemyMovement()
+	enemyMovement()
 
 	let velocity = playerBox.getLinearVelocity()
 
