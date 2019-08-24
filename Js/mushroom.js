@@ -59,6 +59,8 @@ audioLoader.load('sounds/1-up.wav', (buffer) => {
 
 const initMushroom = (x, y) => {
 
+	mushroomSd.speed = 10
+
 	mushroom = new Physijs.BoxMesh(new THREE.BoxGeometry(1, 1, 1), mushroomSide, 1)
 	mushroom.position.set(x, y + 1.5, 0)
 	scene.add(mushroom)
@@ -77,6 +79,8 @@ const initMushroom = (x, y) => {
 
 const init1Up = (x, y) => {
 
+	mushroomSd.speed = 10
+	
 	let oneUp = new Physijs.BoxMesh(new THREE.BoxGeometry(1, 1, 1), oneUpSide, 1)
 	oneUp.position.set(x, y + 1.5, 0)
 	scene.add(oneUp)
