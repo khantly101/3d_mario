@@ -4,7 +4,7 @@
 
 const keyboard 		= {}
 const goombaSd 		= {first: 2, second: 2, third: 2, twelfth: 2, thirteenth: 2}
-const mushroomSd 	= {speed: 6}
+const mushroomSd 	= {speed: 10}
 const marioR 		= {right: 0, left: 0}
 
 let renderer, playerBox
