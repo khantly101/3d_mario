@@ -34,7 +34,7 @@ const initBricks = () => {
 	brick.position.set(-0.50, 3.8, .5)
 	scene.add(brick)
 	
-	const brickTop = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const brickTop = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	brickTop.position.set(-0.50, 4.35, .5)
 	brickTop.rotation.x = -Math.PI/2
 	scene.add(brickTop)
@@ -43,7 +43,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const brickBottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const brickBottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	brickBottom.position.set(-0.50, 3.25, .5)
 	brickBottom.rotation.x = -Math.PI/2
 	scene.add(brickBottom)
@@ -61,7 +61,7 @@ const initBricks = () => {
 	copyBrick.position.set(1.6, 3.8, .5)
 	scene.add(copyBrick)
 
-	const copyBrickTop = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrickTop = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrickTop.position.set(1.6, 4.35, .5)
 	copyBrickTop.rotation.x = -Math.PI/2
 	scene.add(copyBrickTop)
@@ -70,7 +70,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrickBottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrickBottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrickBottom.position.set(1.6, 3.25, .5)
 	copyBrickBottom.rotation.x = -Math.PI/2
 	scene.add(copyBrickBottom)
@@ -88,7 +88,7 @@ const initBricks = () => {
 	copyBrick2.position.set(3.7, 3.8, .5)
 	scene.add(copyBrick2)
 
-	const copyBrick2Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick2Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick2Top.position.set(3.7, 4.35, .5)
 	copyBrick2Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick2Top)
@@ -97,7 +97,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick2Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick2Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick2Bottom.position.set(3.7, 3.25, .5)
 	copyBrick2Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick2Bottom)
@@ -122,7 +122,7 @@ const initBricks = () => {
 	copyBrick3.position.set(66.7, 3.8, .5)
 	scene.add(copyBrick3)
 
-	const copyBrick3Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick3Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick3Top.position.set(66.7, 4.35, .5)
 	copyBrick3Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick3Top)
@@ -131,7 +131,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick3Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick3Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick3Bottom.position.set(66.7, 3.25, .5)
 	copyBrick3Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick3Bottom)
@@ -149,7 +149,7 @@ const initBricks = () => {
 	copyBrick4.position.set(68.8, 3.8, .5)
 	scene.add(copyBrick4)
 
-	const copyBrick4Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick4Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick4Top.position.set(68.8, 4.35, .5)
 	copyBrick4Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick4Top)
@@ -158,7 +158,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick4Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick4Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick4Bottom.position.set(68.8, 3.25, .5)
 	copyBrick4Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick4Bottom)
@@ -180,7 +180,7 @@ const initBricks = () => {
 	copyBrick5.position.set(70.15, 8.2, .5)
 	scene.add(copyBrick5)
 
-	const copyBrick5Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick5Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick5Top.position.set(70.15, 8.75, .5)
 	copyBrick5Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick5Top)
@@ -189,7 +189,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick5Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick5Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick5Bottom.position.set(70.15, 7.65, .5)
 	copyBrick5Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick5Bottom)
@@ -207,7 +207,7 @@ const initBricks = () => {
 	copyBrick6.position.set(71.2, 8.2, .5)
 	scene.add(copyBrick6)
 
-	const copyBrick6Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick6Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick6Top.position.set(71.2, 8.755, .5)
 	copyBrick6Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick6Top)
@@ -216,7 +216,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick6Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick6Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick6Bottom.position.set(71.2, 7.65, .5)
 	copyBrick6Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick6Bottom)
@@ -234,7 +234,7 @@ const initBricks = () => {
 	copyBrick7.position.set(72.25, 8.2, .5)
 	scene.add(copyBrick7)
 
-	const copyBrick7Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick7Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick7Top.position.set(72.25, 8.75, .5)
 	copyBrick7Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick7Top)
@@ -243,7 +243,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick7Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick7Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick7Bottom.position.set(72.25, 7.65, .5)
 	copyBrick7Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick7Bottom)
@@ -261,7 +261,7 @@ const initBricks = () => {
 	copyBrick8.position.set(73.3, 8.2, .5)
 	scene.add(copyBrick8)
 
-	const copyBrick8Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick8Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick8Top.position.set(73.3, 8.75, .5)
 	copyBrick8Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick8Top)
@@ -270,7 +270,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick8Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick8Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick8Bottom.position.set(73.3, 7.65, .5)
 	copyBrick8Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick8Bottom)
@@ -288,7 +288,7 @@ const initBricks = () => {
 	copyBrick9.position.set(74.35, 8.2, .5)
 	scene.add(copyBrick9)
 
-	const copyBrick9Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick9Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick9Top.position.set(74.35, 8.75, .5)
 	copyBrick9Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick9Top)
@@ -297,7 +297,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick9Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick9Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick9Bottom.position.set(74.35, 7.65, .5)
 	copyBrick9Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick9Bottom)
@@ -315,7 +315,7 @@ const initBricks = () => {
 	copyBrick10.position.set(75.4, 8.2, .5)
 	scene.add(copyBrick10)
 
-	const copyBrick10Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick10Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick10Top.position.set(75.4, 8.75, .5)
 	copyBrick10Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick10Top)
@@ -324,7 +324,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick10Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick10Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick10Bottom.position.set(75.4, 7.65, .5)
 	copyBrick10Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick10Bottom)
@@ -342,7 +342,7 @@ const initBricks = () => {
 	copyBrick11.position.set(76.45, 8.2, .5)
 	scene.add(copyBrick11)
 
-	const copyBrick11Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick11Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick11Top.position.set(76.45, 8.75, .5)
 	copyBrick11Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick11Top)
@@ -351,7 +351,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick11Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick11Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick11Bottom.position.set(76.45, 7.65, .5)
 	copyBrick11Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick11Bottom)
@@ -369,7 +369,7 @@ const initBricks = () => {
 	copyBrick12.position.set(77.5, 8.2, .5)
 	scene.add(copyBrick12)
 
-	const copyBrick12Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick12Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick12Top.position.set(77.5, 8.75, .5)
 	copyBrick12Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick12Top)
@@ -378,7 +378,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick12Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick12Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick12Bottom.position.set(77.5, 7.65, .5)
 	copyBrick12Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick12Bottom)
@@ -396,7 +396,7 @@ const initBricks = () => {
 	copyBrick13.position.set(78.55, 8.2, .5)
 	scene.add(copyBrick13)
 
-	const copyBrick13Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick13Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick13Top.position.set(78.55, 8.75, .5)
 	copyBrick13Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick13Top)
@@ -405,7 +405,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick13Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick13Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick13Bottom.position.set(78.55, 7.65, .5)
 	copyBrick13Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick13Bottom)
@@ -430,7 +430,7 @@ const initBricks = () => {
 	copyBrick14.position.set(85.65, 8.2, .5)
 	scene.add(copyBrick14)
 
-	const copyBrick14Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick14Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick14Top.position.set(85.65, 8.75, .5)
 	copyBrick14Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick14Top)
@@ -439,7 +439,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick14Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick14Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick14Bottom.position.set(85.65, 7.65, .5)
 	copyBrick14Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick14Bottom)
@@ -457,7 +457,7 @@ const initBricks = () => {
 	copyBrick15.position.set(84.6, 8.2, .5)
 	scene.add(copyBrick15)
 
-	const copyBrick15Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick15Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick15Top.position.set(84.6, 8.75, .5)
 	copyBrick15Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick15Top)
@@ -466,7 +466,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick15Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick15Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick15Bottom.position.set(84.6, 7.65, .5)
 	copyBrick15Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick15Bottom)
@@ -484,7 +484,7 @@ const initBricks = () => {
 	copyBrick16.position.set(83.55, 8.2, .5)
 	scene.add(copyBrick16)
 
-	const copyBrick16Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick16Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick16Top.position.set(83.55, 8.75, .5)
 	copyBrick16Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick16Top)
@@ -493,7 +493,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick16Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick16Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick16Bottom.position.set(83.55, 7.65, .5)
 	copyBrick16Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick16Bottom)
@@ -515,7 +515,7 @@ const initBricks = () => {
 	copyBrick17.position.set(86.7, 3.8, .5)
 	scene.add(copyBrick17)
 
-	const copyBrick17Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick17Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick17Top.position.set(86.7, 4.35, .5)
 	copyBrick17Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick17Top)
@@ -524,7 +524,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick17Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick17Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick17Bottom.position.set(86.7, 3.25, .5)
 	copyBrick17Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick17Bottom)
@@ -548,7 +548,7 @@ const initBricks = () => {
 	copyBrick18.position.set(93.8, 3.8, .5)
 	scene.add(copyBrick18)
 
-	const copyBrick18Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick18Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick18Top.position.set(93.8, 4.35, .5)
 	copyBrick18Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick18Top)
@@ -557,7 +557,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick18Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick18Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick18Bottom.position.set(93.8, 3.25, .5)
 	copyBrick18Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick18Bottom)
@@ -575,7 +575,7 @@ const initBricks = () => {
 	copyBrick19.position.set(94.85, 3.8, .5)
 	scene.add(copyBrick19)
 
-	const copyBrick19Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick19Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick19Top.position.set(94.85, 4.35, .5)
 	copyBrick19Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick19Top)
@@ -584,7 +584,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick19Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick19Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick19Bottom.position.set(94.85, 3.25, .5)
 	copyBrick19Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick19Bottom)
@@ -606,7 +606,7 @@ const initBricks = () => {
 	copyBrick20.position.set(115.05, 3.8, .5)
 	scene.add(copyBrick20)
 
-	const copyBrick20Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick20Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick20Top.position.set(115.05, 4.35, .5)
 	copyBrick20Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick20Top)
@@ -615,7 +615,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick20Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick20Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick20Bottom.position.set(115.05, 3.25, .5)
 	copyBrick20Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick20Bottom)
@@ -633,7 +633,7 @@ const initBricks = () => {
 	copyBrick21.position.set(128, 3.8, .5)
 	scene.add(copyBrick21)
 	
-	const copyBrick21Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick21Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick21Top.position.set(128, 4.35, .5)
 	copyBrick21Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick21Top)
@@ -642,7 +642,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick21Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick21Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick21Bottom.position.set(128, 3.25, .5)
 	copyBrick21Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick21Bottom)
@@ -660,7 +660,7 @@ const initBricks = () => {
 	copyBrick22.position.set(129.05, 3.8, .5)
 	scene.add(copyBrick22)
 
-	const copyBrick22Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick22Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick22Top.position.set(129.05, 4.35, .5)
 	copyBrick22Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick22Top)
@@ -669,7 +669,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick22Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick22Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick22Bottom.position.set(129.05, 3.25, .5)
 	copyBrick22Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick22Bottom)
@@ -691,7 +691,7 @@ const initBricks = () => {
 	copyBrick23.position.set(118.55, 8.2, .5)
 	scene.add(copyBrick23)
 
-	const copyBrick23Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick23Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick23Top.position.set(118.55, 8.75, .5)
 	copyBrick23Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick23Top)
@@ -700,7 +700,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick23Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick23Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick23Bottom.position.set(118.55, 7.65, .5)
 	copyBrick23Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick23Bottom)
@@ -718,7 +718,7 @@ const initBricks = () => {
 	copyBrick24.position.set(119.6, 8.2, .5)
 	scene.add(copyBrick24)
 
-	const copyBrick24Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick24Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick24Top.position.set(119.6, 8.75, .5)
 	copyBrick24Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick24Top)
@@ -727,7 +727,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick24Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick24Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick24Bottom.position.set(119.6, 7.65, .5)
 	copyBrick24Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick24Bottom)
@@ -745,7 +745,7 @@ const initBricks = () => {
 	copyBrick25.position.set(120.65, 8.2, .5)
 	scene.add(copyBrick25)
 
-	const copyBrick25Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick25Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick25Top.position.set(120.65, 8.75, .5)
 	copyBrick25Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick25Top)
@@ -754,7 +754,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick25Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick25Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick25Bottom.position.set(120.65, 7.65, .5)
 	copyBrick25Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick25Bottom)
@@ -772,7 +772,7 @@ const initBricks = () => {
 	copyBrick26.position.set(127.10, 8.2, .5)
 	scene.add(copyBrick26)
 
-	const copyBrick26Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick26Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick26Top.position.set(127.10, 8.75, .5)
 	copyBrick26Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick26Top)
@@ -781,7 +781,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick26Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick26Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick26Bottom.position.set(127.10, 7.65, .5)
 	copyBrick26Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick26Bottom)
@@ -799,7 +799,7 @@ const initBricks = () => {
 	copyBrick27.position.set(130.25, 8.2, .5)
 	scene.add(copyBrick27)
 
-	const copyBrick27Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick27Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick27Top.position.set(130.25, 8.75, .5)
 	copyBrick27Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick27Top)
@@ -808,7 +808,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick27Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick27Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick27Bottom.position.set(130.25, 7.65, .5)
 	copyBrick27Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick27Bottom)
@@ -831,7 +831,7 @@ const initBricks = () => {
 	copyBrick28.position.set(174.40, 3.8, .5)
 	scene.add(copyBrick28)
 
-	const copyBrick28Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick28Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick28Top.position.set(174.40, 4.35, .5)
 	copyBrick28Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick28Top)
@@ -840,7 +840,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick28Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick28Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick28Bottom.position.set(174.40, 3.25, .5)
 	copyBrick28Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick28Bottom)
@@ -858,7 +858,7 @@ const initBricks = () => {
 	copyBrick29.position.set(175.45, 3.8, .5)
 	scene.add(copyBrick29)
 
-	const copyBrick29Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick29Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick29Top.position.set(175.45, 4.35, .5)
 	copyBrick29Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick29Top)
@@ -867,7 +867,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick29Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick29Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick29Bottom.position.set(175.45, 3.25, .5)
 	copyBrick29Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick29Bottom)
@@ -885,7 +885,7 @@ const initBricks = () => {
 	copyBrick30.position.set(177.55, 3.8, .5)
 	scene.add(copyBrick30)
 
-	const copyBrick30Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick30Top = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick30Top.position.set(177.55, 4.35, .5)
 	copyBrick30Top.rotation.x = -Math.PI/2
 	scene.add(copyBrick30Top)
@@ -894,7 +894,7 @@ const initBricks = () => {
 		jump = true
 	})
 
-	const copyBrick30Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
+	const copyBrick30Bottom = new Physijs.BoxMesh(new THREE.PlaneGeometry(0.95, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)
 	copyBrick30Bottom.position.set(177.55, 3.25, .5)
 	copyBrick30Bottom.rotation.x = -Math.PI/2
 	scene.add(copyBrick30Bottom)
