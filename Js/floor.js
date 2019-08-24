@@ -83,7 +83,9 @@ const initFloor = () => {
 	meshFloor.position.set(15.75, -1, .5)
 	scene.add(meshFloor)
 	meshFloor.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 		if (other_object.geometry.id !== playerBox.geometry.id) {
 			other_object.setLinearVelocity({x: mushroomSd.speed, y: 0, z: 0})
 		}
@@ -98,7 +100,9 @@ const initFloor = () => {
 	smallFloor.position.set(67.85, -1, .5)
 	scene.add(smallFloor)
 	smallFloor.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 
 
@@ -111,7 +115,9 @@ const initFloor = () => {
 	floorSet2.position.set(118.05, -1, .5)
 	scene.add(floorSet2)
 	floorSet2.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 
 	////////////////
@@ -122,7 +128,9 @@ const initFloor = () => {
 	floorSet3.position.set(191.6, -1, .5)
 	scene.add(floorSet3)
 	floorSet3.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 
 	////////////////

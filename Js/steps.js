@@ -196,7 +196,9 @@ initSteps = () => {
 	scene.add(step4)
 
 	step4.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 
 	const step3 = new Physijs.BoxMesh(new THREE.BoxGeometry(3.51, 1, 2 ), sides3, 0)
@@ -204,7 +206,9 @@ initSteps = () => {
 	scene.add(step3)
 
 	step3.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 	
 	const step2 = new Physijs.BoxMesh(new THREE.BoxGeometry(2.34, 1, 2 ), sides2, 0)
@@ -212,7 +216,9 @@ initSteps = () => {
 	scene.add(step2)
 
 	step2.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 	
 	const step = new Physijs.BoxMesh(new THREE.BoxGeometry(1.17, 1, 2 ), sides, 0)
@@ -220,7 +226,9 @@ initSteps = () => {
 	scene.add(step)
 
 	step.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 	
 	
@@ -233,7 +241,9 @@ initSteps = () => {
 	scene.add(step4clone)
 
 	step4clone.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 	
 	const step3clone = new Physijs.BoxMesh(new THREE.BoxGeometry(3.51, 1, 2 ), sides3, 0)
@@ -241,7 +251,9 @@ initSteps = () => {
 	scene.add(step3clone)
 
 	step3clone.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 	
 	const step2clone = new Physijs.BoxMesh(new THREE.BoxGeometry(2.34, 1, 2 ), sides2, 0)
@@ -249,7 +261,9 @@ initSteps = () => {
 	scene.add(step2clone)
 
 	step2clone.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 	
 	const stepclone = new Physijs.BoxMesh(new THREE.BoxGeometry(1.17, 1, 2 ), sides, 0)
@@ -257,7 +271,9 @@ initSteps = () => {
 	scene.add(stepclone)
 
 	stepclone.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 	
 
@@ -270,7 +286,9 @@ initSteps = () => {
 	scene.add(step5)
 
 	step5.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 
 	const step4set2clone = new Physijs.BoxMesh(new THREE.BoxGeometry(4.68, 1, 2 ), sides4, 0)
@@ -278,7 +296,9 @@ initSteps = () => {
 	scene.add(step4set2clone)
 
 	step4set2clone.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 	
 	const step3set2clone = new Physijs.BoxMesh(new THREE.BoxGeometry(3.51, 1, 2 ), sides3, 0)
@@ -286,7 +306,9 @@ initSteps = () => {
 	scene.add(step3set2clone)
 
 	step3set2clone.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 	
 	const step2set2clone = new Physijs.BoxMesh(new THREE.BoxGeometry(2.34, 1, 2 ), sides2, 0)
@@ -294,7 +316,9 @@ initSteps = () => {
 	scene.add(step2set2clone)
 
 	step2set2clone.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 	
 
@@ -307,7 +331,9 @@ initSteps = () => {
 	scene.add(step4set3clone)
 
 	step4set3clone.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 	
 	const step3set3clone = new Physijs.BoxMesh(new THREE.BoxGeometry(3.51, 1, 2 ), sides3, 0)
@@ -315,7 +341,9 @@ initSteps = () => {
 	scene.add(step3set3clone)
 
 	step3set3clone.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 	
 	const step2set3clone = new Physijs.BoxMesh(new THREE.BoxGeometry(2.34, 1, 2 ), sides2, 0)
@@ -323,7 +351,9 @@ initSteps = () => {
 	scene.add(step2set3clone)
 
 	step2set3clone.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 	
 	const stepset3clone = new Physijs.BoxMesh(new THREE.BoxGeometry(1.17, 1, 2 ), sides, 0)
@@ -331,7 +361,9 @@ initSteps = () => {
 	scene.add(stepset3clone)
 
 	stepset3clone.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 	
 	
@@ -344,7 +376,9 @@ initSteps = () => {
 	scene.add(step9)
 
 	step9.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 	
 	const step8 = new Physijs.BoxMesh(new THREE.BoxGeometry(9.36, 1, 2 ), sides8, 0)
@@ -352,7 +386,9 @@ initSteps = () => {
 	scene.add(step8)
 
 	step8.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 	
 	const step7 = new Physijs.BoxMesh(new THREE.BoxGeometry(8.19, 1, 2 ), sides7, 0)
@@ -360,7 +396,9 @@ initSteps = () => {
 	scene.add(step7)
 
 	step7.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 	
 	const step6 = new Physijs.BoxMesh(new THREE.BoxGeometry(7.02, 1, 2 ), sides6, 0)
@@ -368,7 +406,9 @@ initSteps = () => {
 	scene.add(step6)
 
 	step6.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 	
 	const step5set4clone = new Physijs.BoxMesh(new THREE.BoxGeometry(5.85, 1, 2 ), sides5, 0)
@@ -376,7 +416,9 @@ initSteps = () => {
 	scene.add(step5set4clone)
 
 	step5set4clone.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 	
 	const step4set4clone = new Physijs.BoxMesh(new THREE.BoxGeometry(4.68, 1, 2 ), sides4, 0)
@@ -384,7 +426,9 @@ initSteps = () => {
 	scene.add(step4set4clone)
 
 	step4set4clone.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 	
 	const step3set4clone = new Physijs.BoxMesh(new THREE.BoxGeometry(3.51, 1, 2 ), sides3, 0)
@@ -392,7 +436,9 @@ initSteps = () => {
 	scene.add(step3set4clone)
 
 	step3set4clone.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 	
 	const step2set4clone = new Physijs.BoxMesh(new THREE.BoxGeometry(2.34, 1, 2 ), sides2, 0)
@@ -400,7 +446,9 @@ initSteps = () => {
 	scene.add(step2set4clone)
 
 	step2set4clone.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 	
 	//////////////////////
@@ -412,7 +460,9 @@ initSteps = () => {
 	scene.add(stand)
 
 	stand.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 	
 }

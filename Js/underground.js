@@ -109,7 +109,9 @@ const initUnderground = () => {
 	undergroundFloor.position.set(100, -175, .5)
 	scene.add(undergroundFloor)
 	undergroundFloor.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 
 	const undergroundWall = new Physijs.BoxMesh(new THREE.BoxGeometry(2, 50, 2), undergroundWallSide, 0)
@@ -120,7 +122,9 @@ const initUnderground = () => {
 	undergroundBlock.position.set(90, -172, .5)
 	scene.add(undergroundBlock)
 	undergroundBlock.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 
 
@@ -133,7 +137,9 @@ const initUnderground = () => {
 	undergroundPipe.rotation.z =  Math.PI/2
 	scene.add(undergroundPipe)
 	undergroundPipe.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 
 	const undergroundPipeTop = new Physijs.BoxMesh(new THREE.PlaneGeometry(1, 1, 1, 1), new THREE.MeshPhongMaterial({transparent: true, opacity: 0}), 0)

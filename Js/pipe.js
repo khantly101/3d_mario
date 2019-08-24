@@ -64,11 +64,15 @@ initPipes = () => {
 	scene.add(pipeTop2)
 
 	pipeTop.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 
 	pipeTop2.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 	
 	//Second Pipe
@@ -93,11 +97,15 @@ initPipes = () => {
 	scene.add(pipe2Top2)
 
 	pipe2Top.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 
 	pipe2Top2.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 
 	//Third Pipe
@@ -122,11 +130,15 @@ initPipes = () => {
 	scene.add(pipe3Top2)
 
 	pipe3Top.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 
 	pipe3Top2.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 
 	//Fourth Pipe
@@ -159,12 +171,16 @@ initPipes = () => {
 			pipesound.play()
 			underground = true
 		} else {
+			if (other_object.geometry.id === playerBox.geometry.id) {
 			jump = true
+		}
 		}
 	})
 
 	pipe4Top2.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 
 
@@ -189,11 +205,15 @@ initPipes = () => {
 	scene.add(pipe5Top2)
 
 	pipe5Top.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 
 	pipe5Top2.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 
 	// Sixth Pipe
@@ -213,11 +233,15 @@ initPipes = () => {
 	scene.add(pipe6Top2)
 
 	pipe6Top.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 
 	pipe6Top2.addEventListener( 'collision', function( other_object, relative_velocity, relative_rotation, contact_normal ) {
-		jump = true
+		if (other_object.geometry.id === playerBox.geometry.id) {
+			jump = true
+		}
 	})
 
 }
