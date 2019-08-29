@@ -25,36 +25,36 @@ P : Pause/Unpause Music
 
 Content not in remake
 
-All ui elements not added
+-All ui elements not added
 
-Super Star not added
+-Super Star not added
 
-Fire Flower/Fireballs not added
+-Fire Flower/Fireballs not added
 
-Touching mushrooms/coins only make sounds
+-Touching mushrooms/coins only make sounds
 
-Koopa Trooper dies in one hit/no shells
+-Koopa Trooper dies in one hit/no shells
 
-No crouching
+-No crouching
 
-No win animation, only sound
+-No win animation, only sound
 
-Enemies does not die when breaking blocks underneath
+-Enemies does not die when breaking blocks underneath
 
-Brick breaking animation not added
+-Brick breaking animation not added
 
-Death Animation not added
+-Death Animation not added
 
 Issues
 
-Stuttering at startup
+-Stuttering at startup
 
-Mushroom movement inconsistent
+-Mushroom movement inconsistent
 
-Jumping inconsistent
+-Jumping inconsistent
 
-In order to use warp pipe, S must be held down as player touches
+-In order to use warp pipe, S must be held down as player touches
 
-Same audio cannot play in quick succession
+-Same audio cannot play in quick succession
 
-Exiting the warp pipe back to the overworld is inconsistent
+-Exiting the warp pipe back to the overworld is inconsistent
